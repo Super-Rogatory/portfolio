@@ -1,0 +1,1 @@
+// Creating a portfolio to provide an introduction on who I am as a person, my intentions as a software engineer and the project that I have been working on.
