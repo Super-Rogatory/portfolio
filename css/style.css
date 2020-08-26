@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(104, 66, 30); /* the alpha at 0.9 produces a very appealing color for my eyes */
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.76);
+    width: 100%;
+}
+.nav-bar{
+    margin: 0;
+    padding: 5px 0;
+}
+.nav-bar ul{
+    list-style-type: none;
+    text-align: center;
+}
+.nav-bar li{
+    display: inline-block;
+    padding-left: 30px;
+    color: white;
+}
+
