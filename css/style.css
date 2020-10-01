@@ -1,57 +1,22 @@
+html, body{
+    width: 100%;
+}
 body {
-    background-color: rgb(104, 66, 30); /* the alpha at 0.9 produces a very appealing color for my eyes */
+    background-color: rgb(255,255,255); /* the alpha at 0.9 produces a very appealing color for my eyes */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.76);
-    width: 100%;
-    height: 75px;
-    display: block;
+    display: flex;
 }
 
-h1{
-    margin: 0;
-    padding-top: 10px;
-    padding-left: 10px;
-    color: goldenrod;
-    display: inline-block;
+ul{
+    list-style: none;
 }
 
-h2.align-middle{
-    margin: 0;
-    text-align: center;
-    background-color: gray;
-    
-}
-.nav-bar{
-    clear: both;
-    /* background-color: grey; */
-    margin: 0;
-    padding-bottom: 0px; /* to give some space between the header border and the Home/About/Contact areas.
-    align-items: center; /* centers all direct children of the parent element */
-    overflow: hidden;
-}
-.nav-bar ul{
-    list-style-type: none;
-    text-align: center;
-}
-.nav-bar li{
-    display: inline-block;
-    padding: 0px 20px;
-    text-align: center;
-    color: white;
+img.test-image{
+    max-width: 9%;
+    height: auto;
 }
 
-.nav-bar li.image{
-    position: absolute;
-    bottom: 922px;
-    right: 66px;
-    
-}
-.nav-bar li.last-image{
-    position: absolute;
-    bottom: 922px;
-    right: 1px;
-}
