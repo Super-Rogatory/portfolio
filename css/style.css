@@ -20,7 +20,7 @@ body {
 span{
     
 }
-nav.container{
+nav.container {
     width: 96%; /* make the container smaller, so that flex-end will space items correctly */
     display: flex;
     align-items: center;
@@ -38,14 +38,15 @@ ul.nav-list{
     padding: 5px;
 }
 
+
 img.test-image{
     max-width: 50px;
     height: auto;
 }
-
 p.name{
     display: inline;
 }
+
 div.title-container{
     width: 100%;
     display: flex;
@@ -54,5 +55,17 @@ div.title-container{
 span.portfolio-title{
     font-size: 1.5rem;
 }
+
+nav.vertical-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+nav.vertical-menu a{
+    text-decoration: none;
+    color: gray;
+    padding: 1rem;
+}
+
 
 
