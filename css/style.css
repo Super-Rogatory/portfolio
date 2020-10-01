@@ -9,6 +9,8 @@
 
 html, body{
     width: 100%;
+    font-size: 16px;
+    font-family: "Special Elite", "Times New Roman", serif;
 }
 body {
     background-color: rgb(255,255,255); /* the alpha at 0.9 produces a very appealing color for my eyes */
@@ -16,7 +18,7 @@ body {
     padding: 0;
 }
 span{
-    font-family: "Special Elite", "Times New Roman", serif;
+    
 }
 nav.container{
     width: 96%; /* make the container smaller, so that flex-end will space items correctly */
@@ -50,7 +52,7 @@ div.title-container{
     justify-content: center;
 }
 span.portfolio-title{
-
+    font-size: 1.5rem;
 }
 
 
