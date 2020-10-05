@@ -17,9 +17,7 @@ body {
     margin: 0;
     padding: 0;
 }
-span{
-    
-}
+
 nav.container {
     width: 96%; /* make the container smaller, so that flex-end will space items correctly */
     display: flex;
@@ -55,13 +53,16 @@ div.title-container{
 span.portfolio-title{
     font-size: 1.5rem;
 }
-
+/* will allow the flex items to appear next to each other */
+.menu-picture-wrapper-container{
+    display: flex;
+}
 
 nav.vertical-menu {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;
+    width: 15%;
 }
 nav.vertical-menu a{
     text-decoration: none;
@@ -69,15 +70,17 @@ nav.vertical-menu a{
     padding: 1rem;
 }
 
-
 nav.center-picture{
     display: inline-flex;
+    flex-direction: row;
     justify-content: center;
-    width: 100%;
+    width: 70%;
 }
 
 img.headshot-picture{
-    width: 15%;
+    border: 5px solid black;
+    width: 40%;
+    height: auto;
 }
 
 
