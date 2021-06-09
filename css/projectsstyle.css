@@ -1,84 +1,110 @@
 @font-face {
-    font-family: 'Special Elite';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Special Elite Regular'), local('SpecialElite-Regular'), url(https://fonts.gstatic.com/s/specialelite/v11/XLYgIZbkc4JPUL5CVArUVL0ntnAOSA.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-family: "Special Elite";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Special Elite Regular"), local("SpecialElite-Regular"),
+    url(https://fonts.gstatic.com/s/specialelite/v11/XLYgIZbkc4JPUL5CVArUVL0ntnAOSA.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
-html, body{
-    width: 100%;
-    font-size: 16px;
-    font-family: "Special Elite", "Times New Roman", serif;
+html,
+body {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Special Elite", "Times New Roman", serif;
 }
 body {
-    background-color: rgb(255,255,255); /* the alpha at 0.9 produces a very appealing color for my eyes */
-    margin: 0;
-    padding: 0;
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /* the alpha at 0.9 produces a very appealing color for my eyes */
+  margin: 0;
+  padding: 0;
 }
 
 nav.container {
-    width: 96%; /* make the container smaller, so that flex-end will space items correctly */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    
+  width: 96%; /* make the container smaller, so that flex-end will space items correctly */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 /* looking for the nav-list class that is directly tied to ul */
-ul.nav-list{
-    list-style: none;
-    text-align: center;
+ul.nav-list {
+  list-style: none;
+  text-align: center;
 }
 /* looking for a descendant of .nav-list that is a li */
 .nav-list li {
-    display: inline;
-    padding: 5px;
+  display: inline;
+  padding: 5px;
 }
 
+img.test-image {
+  max-width: 50px;
+  height: auto;
+}
+p.name {
+  display: inline;
+}
 
-img.test-image{
-    max-width: 50px;
-    height: auto;
+div.title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-p.name{
-    display: inline;
+span.portfolio-title {
+  font-size: 1.5rem;
 }
 
-div.title-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-span.portfolio-title{
-    font-size: 1.5rem;
-}
 /* will allow the flex items to appear next to each other */
-.menu-picture-wrapper-container{
-    display: flex;
+section.body-wrapper-container {
+  display: flex;
 }
-
 nav.vertical-menu {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 15%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%; /* takes up 80% of the 10% (of the parent element menu) */
 }
-nav.vertical-menu a{
-    text-decoration: none;
-    color: gray;
-    padding: 1rem;
+nav.vertical-menu a {
+  text-decoration: none;
+  color: gray;
+  padding: 1rem;
 }
-
-nav.center-picture{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 70%;
+div.menu-picture-wrapper-container {
+  display: inline-flex;
+  width: 10%; /* takes up 10% of the screen width */
 }
-
-img.headshot-picture{
-    border: 3px solid black;
-    width: 40%;
-    height: auto;
+/* main-projects-wrapper needs to be inline-flex to pair with vertical-menu */
+div.main-projects-wrapper {
+  background-color: white;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 70%;
+}
+div.picture-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.column-under-card {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.column-under-card > img {
+  border: 3px solid black;
+  width: 100%;
+  height: auto;
+}
+.column-under-card > a {
+  margin: 1rem;
+  padding: 0;
+  text-align: center;
 }
