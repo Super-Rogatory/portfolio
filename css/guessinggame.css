@@ -31,7 +31,7 @@ div.gameplay-area {
   height: auto;
   justify-content: center;
 }
-div.gameplay-title {
+div #gameplay-title {
   text-align: center;
   width: 50%;
 }
@@ -40,7 +40,8 @@ div.main-content-of-game {
   justify-content: center;
   width: 50%;
 }
-div.main-content-of-game > input {
+div.main-content-of-game > input,
+button {
   margin: 0.3rem;
   max-height: 1rem;
 }

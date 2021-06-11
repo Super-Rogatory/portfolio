@@ -8,21 +8,21 @@
     </head>
     <body>
         <header class="title-of-game-wrapper">
-            <h1>Guessing Game by Chukwudi Ikem</h1>
+            <h1>Simple Guessing Game by Chukwudi Ikem</h1>
             <div class="gameplay-area">
-                <div class="gameplay-title">
-                    <h3>Previous Guesses</h3>
+                <div id="gameplay-title">
+                    <h3>Previous Guesse<h2>-</h2></h3>
                     
-                    <p><strong>Status: </strong>One Guess Remaining, you are close!</p>
+                    <p><strong>Status: </strong>Submit a Guess, you have five tries!</p>
                 </div>
                 <div class="main-content-of-game">
                     <input placeholder="enter a guess!"></input>
-                    <input type="submit" value="Submit Guess" name="submit-button"></input>
-                    <input type="submit" value="Play Again" name="submit-button"></input>
-                    <input type="submit" value="Hint" name="submit-button"></input>
+                    <button id="submit-guess-btn">Submit Guess</button>
+                    <button id="play-again-btn">Play Again</button>
+                    <button id="hint-button">Hint</button>
                 </div>
             </div>
         </header>
-        
+        <script src="../scripts/guessinggame.js"></script>
     </body>
 </html>
