@@ -82,21 +82,23 @@ div.menu-picture-wrapper-container {
 }
 /* main-projects-wrapper needs to be inline-flex to pair with vertical-menu */
 div.main-projects-wrapper {
-  background-color: white;
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: left;
-  width: 70%;
+  background-color: rgb(240, 235, 235);
+  width: 75%;
+  border: 5px solid rgb(173, 160, 160);
+  border-radius: 10px;
 }
 div.picture-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.column-under-card {
+.picture-cards .column-under-card img {
+  height: 300px;
+  width: 300px;
+}
+div.column-under-card {
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .column-under-card > img {
   border: 3px solid black;
