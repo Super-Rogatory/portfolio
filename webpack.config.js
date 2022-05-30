@@ -1,7 +1,5 @@
-// entry point -> index.js in client folder
-// the idea -> transform and bundle our index file, with a source map, into the public folder.
 module.exports = {
-    entry: "./client/index.js",
+    entry: ["./client/index.js"],
     output: {
         path: __dirname,
         filename: "./public/bundle.js",
@@ -23,5 +21,5 @@ module.exports = {
             },
         ],
     },
-    mode: 'development'
+    mode: "development",
 };
