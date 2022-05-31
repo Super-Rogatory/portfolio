@@ -59,6 +59,10 @@ export const ClickableMenu = styled.div`
     & span {
         color: #99a8e8;
     }
+    & li:hover {
+        color: #99a8e8;
+        transition: 0.5s;
+    }
 `
 
 export const Button = styled.button`
@@ -70,4 +74,11 @@ export const Button = styled.button`
     font-weight: 800;
     width: 100px;
     height: 50px;
+    &:hover {
+        background-color: rgba(153,168,232,0.1);
+        transition: 0.5s;
+    }
+    & span {
+        z-index: 1;
+    }
 `
