@@ -1,8 +1,17 @@
-import React from 'react';
+import React from "react";
+import { NavBar, Container } from "./FrontPage.style";
+import { GlobalStyles } from "./GlobalStyles.style";
 
 class FrontPage extends React.Component {
     render() {
-        return 'Hissse'
+        return (
+            <>
+                <GlobalStyles />
+                <Container>
+                    <NavBar>Hi</NavBar>
+                </Container>
+            </>
+        );
     }
 }
 
