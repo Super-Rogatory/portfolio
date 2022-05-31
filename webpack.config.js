@@ -3,8 +3,9 @@ const path = require("path");
 module.exports = {
     entry: "./client/index.js",
     output: {
-        path: __dirname,
-        filename: "./public/bundle.js",
+        filename: "bundle.js",
+        path: path.resolve(__dirname, 'public'),
+
     },
     devtool: "source-map",
     module: {
@@ -23,6 +24,10 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: "asset/resource",
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
             },
         ],

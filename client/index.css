@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'consolas';
+    src: url(./fonts/CONSOLA.TTF), url(./fonts/CONSOLA.TTF), 
+        url(./fonts/consolai.ttf), url(./fonts/Consolas.ttf), url(./fonts/consolaz.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
