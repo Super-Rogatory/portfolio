@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 
-export const NavBar = styled.div`
+export const FullNavBar = styled.div`
     display: flex;
     color: #616b93;
     width: 95%;
