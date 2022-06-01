@@ -15,6 +15,11 @@ export const FooterSectionContainer = styled.div`
     & img {
         width: 50px;
         height: 50px;
-        filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8);
+        filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8);  
+    }
+
+    & img:hover {
+        filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8);  
+        transition: 0.5s;
     }
 `
