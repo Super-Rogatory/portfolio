@@ -37,7 +37,6 @@ export const BodySectionContainer = styled.section`
         margin-bottom: 0px;
         font-size: 2em;
         font-weight: 400;
-        color: ${(props) => props.color};
     }
     & p {
         font-size: 14px;

@@ -1,6 +1,7 @@
 import React from "react";
 import { GlobalStyles } from "./GlobalStyles.style";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 import {
     Container,
     BodyContainer,
@@ -32,7 +33,7 @@ class FrontPage extends React.Component {
                     </BodySectionContainer>
                     <img src={headshot} alt="artistic photo of Chukwudi Ikem" />
                 </BodyContainer>
-                
+                <Footer />
             </Container>
         );
     }
