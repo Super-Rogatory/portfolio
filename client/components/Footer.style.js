@@ -5,7 +5,7 @@ export const FooterContainer = styled.footer`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10vh;
+    height: 20vh;
 `
 
 export const FooterSectionContainer = styled.div`

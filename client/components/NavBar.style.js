@@ -4,7 +4,7 @@ export const FullNavBar = styled.div`
     display: flex;
     color: #616b93;
     width: 95%;
-    height: auto;
+    height: 15vh;
     margin: auto;
     justify-content: space-between;
     align-items: center;
@@ -16,26 +16,25 @@ export const NavBarContainer = styled.div`
 
 export const ClickablePhotoOfMe = styled.div`
     width: 100px;
-    height: auto;
+    height: 10vh;
     display: flex;
-    justify-content: center;
-    
-    padding-top: 35px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     & img {
         width: 65px;
         height: 65px;
         border: 1px solid #616b93;
         border-radius: 100%;
-        box-shadow: 0px 0px 10px 2px #616b93;
+        box-shadow: 0px 0px 5px 2px #616b93;
     } 
     & img:hover {
-        transform: scale(1.3);
+        transform: scale(1.2);
     }
 
 `
 
 export const ClickableMenu = styled.div`
-    
     & ul {   
         display: flex;
         justify-content: space-evenly;

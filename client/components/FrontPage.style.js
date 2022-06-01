@@ -8,24 +8,35 @@ export const Container = styled.div`
 `;
 
 export const BodyContainer = styled.div`
-    background-color: white;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 450px;
+    height: 65vh;
 
     & img {
         width: 315px;
         height: 450px;
+        filter: opacity(1) drop-shadow(-5px 9px 5px #D3D3D3); 
     }
+
+    @media only screen and (max-width: 965px) {
+        & img {
+            width: 140px;
+            height: 200px;
+        }
+    } 
+    @media only screen and (max-height: 700px) {
+        & img {
+            height: 100%;
+        }
+    }    
     
 `
 export const BodySectionContainer = styled.section`
-    background-color: blanchedalmond;
     display: flex;
     flex-direction: column;
     width: 65%;
-    
+    height: 100%;
     & h6 {
         margin-top: 20px;
         margin-bottom: 0px;
@@ -37,14 +48,43 @@ export const BodySectionContainer = styled.section`
         margin-bottom: 0px;
         font-size: 2em;
         font-weight: 400;
+        
     }
     & p {
-        font-size: 14px;
+        margin-top: 30px;
+        font-size: 0.6em;
         width: 500px;
         height: 100px;
-        line-height: 16px;
+        line-height: 0.8rem;
         font-weight: 400;
-        margin-top: 30px;
-        color: #404040;
+        color: #D3D3D3;
     }
+
+    @media only screen and (max-width: 1381px) {
+        & h1 {
+            font-size: 1.7em;
+        }
+    }
+    @media only screen and (max-height: 700px) {
+        overflow: hidden;
+        & h6 {
+            margin-top: 5px;
+        }
+        & h1 {
+            margin-top: 25px;
+        }
+        & p {
+            margin-top: 15px;
+        }
+    }
+    @media only screen and (min-height: 815px) {
+        justify-content: space-between;
+    }
+   
+`
+
+export const ImgContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
