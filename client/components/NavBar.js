@@ -31,7 +31,7 @@ class NavBar extends React.Component {
                                 <span>03. </span>Contact
                             </li>
                             <li>
-                                <Button><span>Resume</span></Button>
+                                <Button size="small"><span>Resume</span></Button>
                             </li>
                         </ul>
                     </ClickableMenu>

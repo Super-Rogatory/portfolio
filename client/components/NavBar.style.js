@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    font-weight: 900;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(41,45,62,255);
-`;
-
-
 export const FullNavBar = styled.div`
     display: flex;
     color: #616b93;
@@ -72,7 +64,7 @@ export const Button = styled.button`
     color: #99a8e8;
     background-color: rgba(41,45,62,255);
     font-weight: 800;
-    width: 100px;
+    width: ${(props) => props.size === "small" ? 100 : 200}px;
     height: 50px;
     &:hover {
         background-color: rgba(153,168,232,0.1);
