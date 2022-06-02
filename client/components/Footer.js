@@ -9,9 +9,15 @@ class Footer extends React.Component {
         return (
             <FooterContainer>
                 <FooterSectionContainer>
-                    <img src={github} alt="github icon" />
-                    <img src={linkedin} alt="linkedin icon" />
-                    <img src={tiktok} alt="tiktok icon" />
+                    <a href="https://github.com/Super-Rogatory" target="_blank">
+                        <img src={github} alt="github icon" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/chukwudiikem/" target="_blank">
+                        <img src={linkedin} alt="linkedin icon" />
+                    </a>
+                    <a href="https://www.tiktok.com/@blackunderflow" target="_blank">
+                        <img src={tiktok} alt="tiktok icon" /> 
+                    </a>            
                 </FooterSectionContainer>
             </FooterContainer>
         )

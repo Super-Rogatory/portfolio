@@ -10,13 +10,23 @@ import {
 } from "../styles/FrontPage.style";
 import { Button } from "../styles/NavBar.style";
 import headshot from "../icons/headshot.png";
+import SkillsPopup from "./SkillsPopup";
 
 class FrontPage extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            openPopup: false
+        };
+    }
+
     render() {
+        const { openPopup } = this.state;
         return (
             <Container>
                 <GlobalStyles />
                 <NavBar />
+                {openPopup && <SkillsPopup />}
                 <BodyContainer>
                     <BodySectionContainer>
                         <h6>Hello there! My name is</h6>
@@ -31,7 +41,7 @@ class FrontPage extends React.Component {
                             from Fullstack Academy. I strive to learn and grow
                             as a developer because programming is fun!
                         </p>
-                        <Button size="long">
+                        <Button size="long" onClick={() => this.setState({ openPopup: !openPopup}) }>
                             <span>Current Skills</span>
                         </Button>
                     </BodySectionContainer>

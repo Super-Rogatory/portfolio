@@ -11,7 +11,11 @@ export const FooterContainer = styled.footer`
 export const FooterSectionContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
-    width: 50%;    
+    width: 50%;   
+    & a {
+        margin: 0px;
+        padding: 0px;
+    } 
     & img {
         width: 50px;
         height: 50px;
