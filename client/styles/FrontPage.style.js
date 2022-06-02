@@ -83,4 +83,7 @@ export const ImgContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    & img {
+        filter: brightness(${(props) => props.dim ? 25 : 100}%) blur(${(props) => props.dim ? 6 : 0}px);
+    }
 `

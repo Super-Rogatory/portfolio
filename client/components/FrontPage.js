@@ -45,7 +45,7 @@ class FrontPage extends React.Component {
                             <span>Current Skills</span>
                         </Button>
                     </BodySectionContainer>
-                    <ImgContainer>
+                    <ImgContainer dim={openPopup}>
                         <img
                             src={headshot}
                             alt="artistic photo of Chukwudi Ikem"

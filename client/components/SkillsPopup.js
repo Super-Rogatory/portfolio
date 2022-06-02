@@ -1,10 +1,10 @@
 import React from 'react';
-import { PopupContainer } from '../styles/Popup.style';
+import { PopupContainer, PopupSectionContainer } from '../styles/Popup.style';
 
 
 class SkillsPopup extends React.Component {
     render() {
-        return <PopupContainer>Hi</PopupContainer>
+        return <PopupContainer><PopupSectionContainer>Hi</PopupSectionContainer></PopupContainer>
     }
 }
 
