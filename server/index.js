@@ -15,4 +15,7 @@ app.get("/", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../client/index.html"));
 });
 
+app.get("/resume.pdf", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client/files/resume.pdf"));
+})
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));

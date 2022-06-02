@@ -1,5 +1,5 @@
 import React from "react";
-import { GlobalStyles } from "./GlobalStyles.style";
+import { GlobalStyles } from "../styles/GlobalStyles.style";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import {
@@ -7,8 +7,8 @@ import {
     BodyContainer,
     BodySectionContainer,
     ImgContainer,
-} from "./FrontPage.style";
-import { Button } from "./NavBar.style";
+} from "../styles/FrontPage.style";
+import { Button } from "../styles/NavBar.style";
 import headshot from "../icons/headshot.png";
 
 class FrontPage extends React.Component {

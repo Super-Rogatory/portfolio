@@ -54,6 +54,12 @@ export const ClickableMenu = styled.div`
         color: #99a8e8;
         transition: 0.5s;
     }
+    & a {
+        text-decoration: none;
+        color: inherit;
+        margin: 0px;
+        padding: 0px;
+    }
 `
 
 export const Button = styled.button`
@@ -65,6 +71,7 @@ export const Button = styled.button`
     font-weight: 800;
     width: ${(props) => props.size === "small" ? 100 : 200}px;
     height: 50px;
+    cursor: pointer;
     &:hover {
         background-color: rgba(153,168,232,0.1);
         transition: 0.5s;

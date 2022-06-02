@@ -5,8 +5,10 @@ import {
     ClickablePhotoOfMe,
     ClickableMenu,
     Button,
-} from "./NavBar.style";
+} from "../styles/NavBar.style";
 import me from "../icons/me.png";
+import { Link } from "react-router-dom";
+
 
 class NavBar extends React.Component {
     render() {
@@ -14,25 +16,38 @@ class NavBar extends React.Component {
             <NavBarContainer>
                 <FullNavBar>
                     <ClickablePhotoOfMe>
-                        <img
-                            src={me}
-                            alt="a drawn image of me, image from: Sam Galang."
-                        />
+                        <Link to="/">
+                            <img
+                                src={me}
+                                alt="a drawn image of me, image from: Sam Galang."
+                            />
+                        </Link>
                     </ClickablePhotoOfMe>
                     <ClickableMenu>
                         <ul>
-                            <li>
-                                <span>01. </span>About
-                            </li>
-                            <li>
-                                <span>02. </span>Projects
-                            </li>
-                            <li>
-                                <span>03. </span>Contact
-                            </li>
-                            <li>
-                                <Button size="small"><span>Resume</span></Button>
-                            </li>
+                            <Link to="/about">
+                                <li>
+                                    <span>01. </span>About
+                                </li>
+                            </Link>
+                            <Link to="/project">
+                                <li>
+                                    <span>02. </span>Projects
+                                </li>
+                            </Link>
+                            <Link to="/contact">
+                                <li>
+                                    <span>03. </span>Contact
+                                </li>
+                            </Link>
+
+                            <Link to="/resume.pdf" target="_blank">
+                                <li>
+                                    <Button size="small">
+                                        <span>Resume</span>
+                                    </Button>
+                                </li>
+                            </Link>
                         </ul>
                     </ClickableMenu>
                 </FullNavBar>

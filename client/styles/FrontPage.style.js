@@ -19,17 +19,13 @@ export const BodyContainer = styled.div`
         filter: opacity(1) drop-shadow(-5px 9px 5px #D3D3D3); 
     }
 
-    @media only screen and (max-width: 965px) {
+    @media only screen and (max-width: 965px) and (max-height: 700px) {
         & img {
-            width: 140px;
-            height: 200px;
+            width: 100%;
+            height: 70%;
         }
     } 
-    @media only screen and (max-height: 700px) {
-        & img {
-            height: 100%;
-        }
-    }    
+ 
     
 `
 export const BodySectionContainer = styled.section`
