@@ -5,10 +5,14 @@ import linkedin from '../icons/linkedin.png';
 import tiktok from '../icons/tiktok.png';
 
 class Footer extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <FooterContainer>
-                <FooterSectionContainer>
+                <FooterSectionContainer dim={this.props.dim}>
                     <a href="https://github.com/Super-Rogatory" target="_blank">
                         <img src={github} alt="github icon" />
                     </a>

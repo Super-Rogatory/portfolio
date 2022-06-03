@@ -12,21 +12,6 @@ export const BodyContainer = styled.div`
     justify-content: center;
     width: 100%;
     height: 65vh;
-
-    & img {
-        width: 315px;
-        height: 450px;
-        filter: opacity(1) drop-shadow(-5px 9px 5px #D3D3D3); 
-    }
-
-    @media only screen and (max-width: 965px) and (max-height: 700px) {
-        & img {
-            width: 100%;
-            height: 70%;
-        }
-    } 
- 
-    
 `
 export const BodySectionContainer = styled.section`
     display: flex;
@@ -84,6 +69,18 @@ export const ImgContainer = styled.div`
     justify-content: center;
     align-items: center;
     & img {
-        filter: brightness(${(props) => props.dim ? 25 : 100}%) blur(${(props) => props.dim ? 6 : 0}px);
+        filter: opacity(1) drop-shadow(-5px 9px 5px #D3D3D3) brightness(${(props) => props.dim ? 25 : 100}%) blur(${(props) => props.dim ? 6 : 0}px);
     }
+
+    & img {
+        width: 315px;
+        height: 450px; 
+    }
+
+    @media only screen and (max-width: 965px) and (max-height: 700px) {
+        & img {
+            width: 100%;
+            height: 70%;
+        }
+    } 
 `

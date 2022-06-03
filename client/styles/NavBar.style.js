@@ -24,9 +24,7 @@ export const ClickablePhotoOfMe = styled.div`
     & img {
         width: 65px;
         height: 65px;
-        border: 1px solid #616b93;
-        border-radius: 100%;
-        box-shadow: 0px 0px 5px 2px #616b93;
+        filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8) ; 
     } 
     & img:hover {
         transform: scale(1.2);

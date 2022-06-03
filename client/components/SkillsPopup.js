@@ -8,4 +8,4 @@ class SkillsPopup extends React.Component {
     }
 }
 
-export default SkillsPopup
+export default SkillsPopup;

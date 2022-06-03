@@ -6,7 +6,7 @@ import {
     ClickableMenu,
     Button,
 } from "../styles/NavBar.style";
-import me from "../icons/me.png";
+import logo from "../icons/logo(2).png";
 import { Link } from "react-router-dom";
 
 
@@ -18,7 +18,7 @@ class NavBar extends React.Component {
                     <ClickablePhotoOfMe>
                         <Link to="/">
                             <img
-                                src={me}
+                                src={logo}
                                 alt="a drawn image of me, image from: Sam Galang."
                             />
                         </Link>

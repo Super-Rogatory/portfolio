@@ -52,7 +52,7 @@ class FrontPage extends React.Component {
                         />
                     </ImgContainer>
                 </BodyContainer>
-                <Footer />
+                <Footer dim={openPopup} />
             </Container>
         );
     }
