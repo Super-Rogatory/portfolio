@@ -12,6 +12,7 @@ import {
 } from "../styles/Popup.style";
 import logo from "../icons/logo(2).png";
 import exit from "../icons/exit_icon.png";
+import arrow from "../icons/right_arrow.png";
 import Typewriter from 'typewriter-effect';
 
 class SkillsPopup extends React.Component {
@@ -53,27 +54,27 @@ class SkillsPopup extends React.Component {
                         }           
                     </PopupSectionPrompt>
                     <PopupSectionBody>
-                        {isFinishedTyping && <><span> {"> open_skills@1.0.0 start-dev /home/super-rogatory/portfolio_website"} </span>
+                        {isFinishedTyping && <><span> {"> open_skills@1.0.0 start /home/guestuser/skills"} </span>
                         <PopupSectionGrid>
                             <PopupSectionRow>
-                                <span>JavaScript</span>
-                                <span>React/Redux</span>
-                                <span>PostgreSQL</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"JavaScript"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"React/Redux"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"PostgreSQL"}</span>
                             </PopupSectionRow>
                             <PopupSectionRow>
-                                <span>Node.js</span>
-                                <span>Redis</span>
-                                <span>MySQL</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Node.js"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Redis"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"MySQL"}</span>
                             </PopupSectionRow>                            
                             <PopupSectionRow>
-                                <span>Python</span>
-                                <span>FastAPI</span>
-                                <span>SQLite3</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Python"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"FastAPI"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"SQLite3"}</span>
                             </PopupSectionRow>
                             <PopupSectionRow>
-                                <span>Git</span>
-                                <span>Npm</span>
-                                <span>Webpack</span>
+                            <span><img src={arrow} alt="picture of right arrow"></img>{"Git"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Npm"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Webpack"}</span>
                             </PopupSectionRow>                                                          
                         </PopupSectionGrid></>}
                     </PopupSectionBody>

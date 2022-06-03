@@ -16,7 +16,7 @@ class FrontPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            openPopup: true
+            openPopup: false
         };
     }
 

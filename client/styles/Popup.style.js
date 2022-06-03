@@ -86,8 +86,12 @@ export const PopupSectionPrompt = styled.section`
         padding: 0px;
     }
 
-    @media only screen and (max-width: 1013px) {
-        font-size: .6rem;
+    @media only screen and (max-width: 800px) {
+        font-size: .5em;
+    }
+
+    @media only screen and (max-width: 1013px) and (min-width: 801px) {
+        font-size: .6em;
     }
 `
 
@@ -98,9 +102,21 @@ export const PopupSectionBody = styled.section`
     font-weight: 400;
     font-size: 18px;
     margin-left: 3px;
-
+    overflow: hidden;
     & span {
         display: block;
+    }
+
+    @media only screen and (max-width: 800px) {
+        & > span {
+            font-size: 0.7em;
+        }
+    }
+
+    @media only screen and (max-width: 1013px) and (min-width: 801px) {
+        & > span {
+            font-size: 0.8em;
+        }
     }
 `
 
@@ -109,16 +125,36 @@ export const PopupSectionGrid = styled.section`
     flex-direction: column;
     width: 100%;
     height: 100%;
+    
 `
 
 export const PopupSectionRow = styled.section`
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     width: 100%;
     height: 19%;
     margin-top: 10px;
+
     & span {
+        display: flex;
+        align-items: center;
         width: 150px;
         text-align: center;
+    }
+    & img {
+        width: 13px;
+        height: 13px;
+        padding: 0px 6px 0px 6px;
+        filter: invert(86%) sepia(31%) saturate(6106%) hue-rotate(193deg) brightness(101%) contrast(82%);
+    }
+
+    @media only screen and (max-width: 800px) {
+        & span {
+            font-size: 0.7em;
+        }
+    }
+    @media only screen and (max-height: 700px) {
+        min-height: 25px;
+        height: 15%;
     }
 `
