@@ -66,6 +66,7 @@ export const PopupRightSide = styled.div`
     width: auto;
     & img {
         cursor: pointer; 
+        pointer-events: all;
     }
     & img:hover {
         filter: invert(86%) sepia(31%) saturate(6106%) hue-rotate(193deg) brightness(101%) contrast(82%);

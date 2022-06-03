@@ -14,6 +14,8 @@ import logo from "../icons/logo(2).png";
 import exit from "../icons/exit_icon.png";
 import arrow from "../icons/right_arrow.png";
 import Typewriter from 'typewriter-effect';
+import { TOGGLE_POPUP } from "../store/actions/actionTypes";
+import { connect } from "react-redux";
 
 class SkillsPopup extends React.Component {
     constructor(props) {
@@ -24,7 +26,7 @@ class SkillsPopup extends React.Component {
     }
     render() {
         const { isFinishedTyping } = this.state;
-
+        const { togglePopup } = this.props;
         return (
             <PopupContainer>
                 <PopupSectionContainer>
@@ -34,7 +36,7 @@ class SkillsPopup extends React.Component {
                             <span>guestuser@LAPTOP-IXR2A6GI:~/skills</span>                            
                         </PopupLeftSide>
                         <PopupRightSide>
-                           <img src={exit} alt="exit button"></img> 
+                           <img src={exit} alt="exit button" onClick={() => togglePopup() }></img> 
                         </PopupRightSide>                
                     </PopupSectionNavBar>
                     <PopupSectionPrompt>
@@ -59,21 +61,21 @@ class SkillsPopup extends React.Component {
                             <PopupSectionRow>
                                 <span><img src={arrow} alt="picture of right arrow"></img>{"JavaScript"}</span>
                                 <span><img src={arrow} alt="picture of right arrow"></img>{"React/Redux"}</span>
-                                <span><img src={arrow} alt="picture of right arrow"></img>{"PostgreSQL"}</span>
-                            </PopupSectionRow>
-                            <PopupSectionRow>
-                                <span><img src={arrow} alt="picture of right arrow"></img>{"Node.js"}</span>
-                                <span><img src={arrow} alt="picture of right arrow"></img>{"Redis"}</span>
-                                <span><img src={arrow} alt="picture of right arrow"></img>{"MySQL"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Express.js"}</span>
                             </PopupSectionRow>                            
                             <PopupSectionRow>
                                 <span><img src={arrow} alt="picture of right arrow"></img>{"Python"}</span>
                                 <span><img src={arrow} alt="picture of right arrow"></img>{"FastAPI"}</span>
-                                <span><img src={arrow} alt="picture of right arrow"></img>{"SQLite3"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Redis"}</span>
                             </PopupSectionRow>
                             <PopupSectionRow>
-                            <span><img src={arrow} alt="picture of right arrow"></img>{"Git"}</span>
-                                <span><img src={arrow} alt="picture of right arrow"></img>{"Npm"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"PostgreSQL"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"SQLite3"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"MySQL"}</span>
+                            </PopupSectionRow>                            
+                            <PopupSectionRow>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Git"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Node.js/npm"}</span>
                                 <span><img src={arrow} alt="picture of right arrow"></img>{"Webpack"}</span>
                             </PopupSectionRow>                                                          
                         </PopupSectionGrid></>}
@@ -84,4 +86,16 @@ class SkillsPopup extends React.Component {
     }
 }
 
-export default SkillsPopup;
+const mapStateToProps = (state) => {
+    return {
+        openPopup: state.openPopup
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        togglePopup: () => dispatch({ type: TOGGLE_POPUP, status: false })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SkillsPopup);

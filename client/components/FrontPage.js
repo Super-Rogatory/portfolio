@@ -11,17 +11,16 @@ import {
 import { Button } from "../styles/NavBar.style";
 import headshot from "../icons/headshot.png";
 import SkillsPopup from "./SkillsPopup";
+import { TOGGLE_POPUP } from "../store/actions/actionTypes";
+import { connect } from "react-redux";
 
 class FrontPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            openPopup: false
-        };
     }
 
     render() {
-        const { openPopup } = this.state;
+        const { openPopup, togglePopup } = this.props;
         return (
             <Container>
                 <GlobalStyles />
@@ -41,7 +40,7 @@ class FrontPage extends React.Component {
                             from Fullstack Academy. I strive to learn and grow
                             as a developer because programming is fun!
                         </p>
-                        <Button size="long" onClick={() => this.setState({ openPopup: !openPopup}) }>
+                        <Button size="long" onClick={() => togglePopup() }>
                             <span>Current Skills</span>
                         </Button>
                     </BodySectionContainer>
@@ -58,4 +57,17 @@ class FrontPage extends React.Component {
     }
 }
 
-export default FrontPage;
+const mapStateToProps = (state) => {
+    return {
+        openPopup: state.openPopup
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+      // dispatching plain actions
+        togglePopup: () => dispatch({ type: TOGGLE_POPUP, status: true }),
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(FrontPage);
