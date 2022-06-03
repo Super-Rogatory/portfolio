@@ -56,7 +56,7 @@ export const PopupSectionNavBar = styled.div`
 export const PopupLeftSide = styled.div`
     display: inline-flex;
     align-items: center;
-    width: 65%;
+    width: auto;
     height: 100%;
 `;
 
@@ -87,7 +87,7 @@ export const PopupSectionPrompt = styled.section`
     }
 
     @media only screen and (max-width: 1013px) {
-        font-size: .5rem;
+        font-size: .6rem;
     }
 `
 
@@ -98,4 +98,27 @@ export const PopupSectionBody = styled.section`
     font-weight: 400;
     font-size: 18px;
     margin-left: 3px;
+
+    & span {
+        display: block;
+    }
+`
+
+export const PopupSectionGrid = styled.section`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+`
+
+export const PopupSectionRow = styled.section`
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 19%;
+    margin-top: 10px;
+    & span {
+        width: 150px;
+        text-align: center;
+    }
 `
