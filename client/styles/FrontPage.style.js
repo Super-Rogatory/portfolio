@@ -69,7 +69,7 @@ export const ImgContainer = styled.div`
     justify-content: center;
     align-items: center;
     & img {
-        filter: opacity(1) drop-shadow(-5px 9px 5px #D3D3D3) brightness(${(props) => props.dim ? 25 : 100}%) blur(${(props) => props.dim ? 6 : 0}px);
+        filter: opacity(1) drop-shadow(-5px 9px 5px #D3D3D3) brightness(${(props) => props.dim ? 25 : 100}%) blur(${(props) => props.dim ? 10 : 0}px);
     }
 
     & img {

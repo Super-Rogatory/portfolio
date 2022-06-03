@@ -20,7 +20,7 @@ export const FooterSectionContainer = styled.div`
     & img {
         width: 50px;
         height: 50px;
-        filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8)
+        filter: (1) drop-shadow(0px 0px 1px #99a8e8)
             brightness(${(props) => (props.dim ? 25 : 100)}%)
             blur(${(props) => (props.dim ? 6 : 0)}px);
         cursor: pointer;
