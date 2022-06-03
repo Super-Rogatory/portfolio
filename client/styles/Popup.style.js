@@ -28,24 +28,41 @@ export const PopupSectionNavBar = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 10%;
+    height: 12%;
     border-radius: 5px 5px 0 0;
     background-color: rgba(240, 248, 255, 0.8);
+    overflow: hidden;
 
     & img {
         width: 32px;
         height: 32px;
         padding: 0 5px 0 5px;
     }
+
+    @media only screen and (max-width: 1510px) {
+        font-size: 0.8rem;
+        & img {
+            width: 24px;
+            height: 24px;
+            padding: 0 5px 0 5px;
+        }
+    }
+
+    @media only screen and (max-width: 1213px) {
+        font-size: 0.6rem;
+    }
 `;
 
 export const PopupLeftSide = styled.div`
     display: inline-flex;
+    align-items: center;
     width: 65%;
     height: 100%;
 `;
 
 export const PopupRightSide = styled.div`
+    display: flex;
+    align-items: center;
     width: auto;
     & img {
         cursor: pointer; 
@@ -55,10 +72,30 @@ export const PopupRightSide = styled.div`
     }
 `;
 
-export const PopupSectionBody = styled.section`
+export const PopupSectionPrompt = styled.section`
     width: 100%;
-    height: 90%;
+    height: 10%;
     color: rgba(240, 248, 255, 0.8);
     font-weight: 400;
     font-size: 18px;
+    margin-left: 3px;
+    overflow: hidden;
+    & .Typewriter {
+        display: inline;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    @media only screen and (max-width: 1013px) {
+        font-size: .5rem;
+    }
+`
+
+export const PopupSectionBody = styled.section`
+    width: 100%;
+    height: 78%;
+    color: rgba(240, 248, 255, 0.8);
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 3px;
 `
