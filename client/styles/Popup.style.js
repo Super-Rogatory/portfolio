@@ -14,6 +14,7 @@ export const PopupContainer = styled.div`
 
 export const PopupSectionContainer = styled.section`
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 50%;
     height: 50%;
@@ -29,7 +30,7 @@ export const PopupSectionNavBar = styled.div`
     width: 100%;
     height: 10%;
     border-radius: 5px 5px 0 0;
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.8);
 
     & img {
         width: 32px;
@@ -41,12 +42,23 @@ export const PopupSectionNavBar = styled.div`
 export const PopupLeftSide = styled.div`
     display: inline-flex;
     width: 65%;
+    height: 100%;
 `;
 
 export const PopupRightSide = styled.div`
-    cursor: pointer;
+    width: auto;
+    & img {
+        cursor: pointer; 
+    }
     & img:hover {
         filter: invert(86%) sepia(31%) saturate(6106%) hue-rotate(193deg) brightness(101%) contrast(82%);
-
     }
 `;
+
+export const PopupSectionBody = styled.section`
+    width: 100%;
+    height: 90%;
+    color: rgba(240, 248, 255, 0.8);
+    font-weight: 400;
+    font-size: 18px;
+`

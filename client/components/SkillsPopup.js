@@ -5,6 +5,7 @@ import {
     PopupRightSide,
     PopupSectionContainer,
     PopupSectionNavBar,
+    PopupSectionBody
 } from "../styles/Popup.style";
 import logo from "../icons/logo(2).png";
 import exit from "../icons/exit_icon.png";
@@ -21,13 +22,14 @@ class SkillsPopup extends React.Component {
                         </PopupLeftSide>
                         <PopupRightSide>
                            <img src={exit} alt="exit button"></img> 
-                        </PopupRightSide>
-                        
-                        {/* <span style={{ color: "black" }}>
-                            guestuser@LAPTOP-IXR2A6GI:
-                        </span>
-                        <span style={{ color: "darkblue" }}>~/skills$</span> */}
+                        </PopupRightSide>                
                     </PopupSectionNavBar>
+                    <PopupSectionBody>
+                        <span style={{ color: "#c3e88d" }}>
+                                guestuser@LAPTOP-IXR2A6GI
+                        </span>:
+                        <span>~/skills</span>$                   
+                    </PopupSectionBody>
                 </PopupSectionContainer>
             </PopupContainer>
         );
