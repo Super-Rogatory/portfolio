@@ -16,6 +16,7 @@ class Project extends React.Component {
                 <NavBar />
                 <BodyContainer>
                     <BodySectionContainer>
+                        Hi
                     </BodySectionContainer>
                 </BodyContainer>
                 <Footer />
