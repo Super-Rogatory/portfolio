@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
-    "build": "webpack",
+    "start": "npm run build & node server",
+    "build": "webpack --mode production",
     "start-dev": "webpack -w & nodemon server"
   },
   "repository": {
@@ -22,8 +22,8 @@
   "dependencies": {
     "express": "^4.18.1",
     "nodemon": "^2.0.16",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-hover-video-player": "^9.6.0",
     "react-redux": "^8.0.2",
     "react-responsive-carousel": "^3.2.23",
