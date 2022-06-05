@@ -1,2 +1,0 @@
-// Creating a portfolio to provide an introduction on who I am as a person, my intentions as a software engineer and the projects that I have been working on.
-// Create Weather controls. Link to Amazon & Spotify.

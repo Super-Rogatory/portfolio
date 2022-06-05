@@ -61,29 +61,42 @@ span.portfolio-title {
   font-size: 1.5rem;
 }
 /* will allow the flex items to appear next to each other */
-section.body-wrapper-container {
+.menu-picture-wrapper-container {
   display: flex;
 }
+
 nav.vertical-menu {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 80%; /* takes up 80% of the 10% (of the parent element menu) */
+  width: 15%;
 }
 nav.vertical-menu a {
+  /*Can edit the vertical menu for easier clickability.*/
+  height: auto;
   text-decoration: none;
   color: gray;
   padding: 1rem;
 }
-div.menu-picture-wrapper-container {
-  display: inline-flex;
-  width: 10%; /* takes up 10% of the screen width */
-}
-/* main-projects-wrapper needs to be inline-flex to pair with vertical-menu */
-div.main-projects-wrapper {
-  background-color: white;
+
+nav.center-picture {
   display: inline-flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   width: 70%;
+}
+
+img.headshot-picture {
+  border: 3px solid black;
+  width: 40%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
