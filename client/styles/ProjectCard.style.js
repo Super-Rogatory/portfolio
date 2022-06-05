@@ -5,7 +5,6 @@ export const ProjectSectionContainer = styled.section`
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: white;
     & h6 {
         margin-top: 20px;
         margin-bottom: 0px;
@@ -57,7 +56,6 @@ export const Cards = styled.section`
     height: 100%;
     align-items: center;
     justify-content: space-around;
-    background-color: blanchedalmond;
 
 `
 
@@ -69,20 +67,80 @@ export const ProjectCard = styled.div`
     max-height: 500px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px black;
+    color: aliceblue;
+    font-weight: 400;
+`
 
-    &:hover {
-        filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8);
-        transition: 0.5s;
-    }
+export const ProjectCardImgSection = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
     & img {
-        height: 75%;
+        object-fit: cover;
+        height: 100%;
         width: 100%;
+        border-radius: 5px 5px 0px 0px;
         filter: opacity(1) brightness(75%); 
-        transition: 0.5s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
-    & img:hover {
-        filter: opacity(1) brightness(25%) blur(6px); 
-        
+
+   ${props => props.dim ? 
+        `
+        & img {
+            filter: opacity(1) brightness(25%) blur(6px);
+        }
+        `
+        : 
+        `
+        & img {
+            opacity(1) brightness(75%);
+        }
+        `
+    }
+    & button:hover {
+        background-color: rgba(153,168,232,0.5);
+        color: rgba(41,45,62,255); 
     }
 `
 
+export const ProjectCardDescription = styled.div`
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 15%; 
+    border-bottom: 1px solid black;
+    & h1 {
+        margin: 5px 0px 0px 15px;
+        padding: 0px;
+        font-size: 22px;
+        font-weight: 800;
+    }
+    & span {   
+        width: 100%;
+        margin: 0px 0px 0px 15px; 
+        font-size: 0.6rem;
+    }
+
+`
+
+export const ProjectCardTechnologiesList = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%; 
+`
+
+export const SpecialButton = styled.button`
+    position: absolute;
+    border: 2px solid #99a8e8;
+    border-radius: 8px;
+    text-align: center;
+    color: #99a8e8;
+    background-color: rgba(41,45,62,255);
+    font-weight: 800;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    
+`

@@ -1,9 +1,9 @@
 import React from 'react';
 import App from './components/App';
 import { createRoot } from 'react-dom/client';
-import './index.css';
-import { connect, Provider } from "react-redux";
+import { Provider } from "react-redux";
 import store from './store/store';
+import './index.css';
 
 // new REACT 18 syntax.
 const container = document.getElementById('root');
