@@ -5,58 +5,13 @@ export const ProjectSectionContainer = styled.section`
     justify-content: center;
     width: 100%;
     height: 100%;
-    & h6 {
-        margin-top: 20px;
-        margin-bottom: 0px;
-        font-weight: 400;
-        color: #99a8e8;
-    }
-    & h1 {
-        margin-top: 40px;
-        margin-bottom: 0px;
-        font-size: 2em;
-        font-weight: 400;
-        
-    }
-    & p {
-        margin-top: 30px;
-        font-size: 0.6em;
-        width: 500px;
-        height: 100px;
-        line-height: 0.8rem;
-        font-weight: 400;
-        color: #D3D3D3;
-    }
-
-    @media only screen and (max-width: 1381px) {
-        & h1 {
-            font-size: 1.7em;
-        }
-    }
-    @media only screen and (max-height: 700px) {
-        overflow: hidden;
-        & h6 {
-            margin-top: 5px;
-        }
-        & h1 {
-            margin-top: 25px;
-        }
-        & p {
-            margin-top: 15px;
-        }
-    }
-    @media only screen and (min-height: 815px) {
-        justify-content: space-between;
-    }
-   
 `
 export const Cards = styled.section`
     display: inline-flex;
     width: 100%;
     height: 100%;
     align-items: center;
-    justify-content: space-around;
-
+    justify-content: space-evenly;
 `
 
 export const ProjectCard = styled.div`
@@ -66,7 +21,7 @@ export const ProjectCard = styled.div`
     height: 100%;
     max-height: 500px;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 15px black;
     color: aliceblue;
     font-weight: 400;
 `
@@ -88,7 +43,7 @@ export const ProjectCardImgSection = styled.div`
    ${props => props.dim ? 
         `
         & img {
-            filter: opacity(1) brightness(25%) blur(6px);
+            filter: opacity(1) brightness(15%) blur(10px);
         }
         `
         : 
@@ -98,7 +53,7 @@ export const ProjectCardImgSection = styled.div`
         }
         `
     }
-    & button:hover {
+    & label:hover {
         background-color: rgba(153,168,232,0.5);
         color: rgba(41,45,62,255); 
     }
@@ -106,20 +61,26 @@ export const ProjectCardImgSection = styled.div`
 
 export const ProjectCardDescription = styled.div`
     display: inline-flex;
+    justify-content: space-evenly;
     flex-direction: column;
     width: 100%;
-    height: 15%; 
+    height: 17%; 
     border-bottom: 1px solid black;
+    background-color: rgba(153,168,232,0.1);
+    color: aliceblue;
     & h1 {
         margin: 5px 0px 0px 15px;
         padding: 0px;
         font-size: 22px;
         font-weight: 800;
+        width: calc(100% - 15px);   
     }
     & span {   
         width: 100%;
         margin: 0px 0px 0px 15px; 
-        font-size: 0.6rem;
+        padding: 0px 5px 0px 0px;
+        font-size: 0.55rem;
+        width: calc(100% - 20px);   
     }
 
 `
@@ -128,19 +89,21 @@ export const ProjectCardTechnologiesList = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%; 
+    height: 8%; 
+    font-size: 0.8rem;
+    border-radius: 0px 0px 5px 5px;
+    font-weight: 600;
+
+    background-color: rgba(153,168,232,0.1);
+    color: aliceblue;
 `
 
-export const SpecialButton = styled.button`
+export const SpecialButton = styled.label`
     position: absolute;
-    border: 2px solid #99a8e8;
+    border: 2px solid rgba(153,168,232,0.1);
     border-radius: 8px;
-    text-align: center;
-    color: #99a8e8;
     background-color: rgba(41,45,62,255);
     font-weight: 800;
     width: 200px;
     height: 50px;
-    cursor: pointer;
-    
 `

@@ -86,12 +86,14 @@ class Project extends React.Component {
                                 </ProjectCardImgSection>
                                 <ProjectCardDescription>
                                     <h1>DinoGuys</h1>
-                                    <span>DinoGuys is..</span>
+                                    <span>
+                                        DinoGuys is a 2D platformer battle royale style game where friends can compete to see who can make it to the
+                                    finish line first!
+                                    </span>
                                 </ProjectCardDescription>
                                 <ProjectCardTechnologiesList>
                                     <span>
-                                        JavaScript Phaser3.js Socket.IO Tiled
-                                        Express
+                                        JavaScript Express Phaser3 Socket.IO Tiled                                        
                                     </span>
                                 </ProjectCardTechnologiesList>
                             </ProjectCard>
@@ -125,11 +127,14 @@ class Project extends React.Component {
                                 </ProjectCardImgSection>
                                 <ProjectCardDescription>
                                     <h1>WeChatterly</h1>
-                                    <span>WeChatterly is..</span>
+                                    <span>
+                                        WeChatterly is a web socket based chat application that allows users to join rooms with friends and talk online
+                                        together.
+                                    </span>
                                 </ProjectCardDescription>
                                 <ProjectCardTechnologiesList>
                                     <span>
-                                        React Express Socket.IO Webpack
+                                        React/Redux Express Socket.IO Sequelize(PostgreSQL)
                                     </span>
                                 </ProjectCardTechnologiesList>
                             </ProjectCard>                                                            

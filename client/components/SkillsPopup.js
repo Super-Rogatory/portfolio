@@ -74,9 +74,9 @@ class SkillsPopup extends React.Component {
                                 <span><img src={arrow} alt="picture of right arrow"></img>{"MySQL"}</span>
                             </PopupSectionRow>                            
                             <PopupSectionRow>
-                                <span><img src={arrow} alt="picture of right arrow"></img>{"Git"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"Git/GitHub"}</span>
                                 <span><img src={arrow} alt="picture of right arrow"></img>{"Node.js/npm"}</span>
-                                <span><img src={arrow} alt="picture of right arrow"></img>{"Webpack"}</span>
+                                <span><img src={arrow} alt="picture of right arrow"></img>{"HTML5/CSS3"}</span>
                             </PopupSectionRow>                                                          
                         </PopupSectionGrid></>}
                     </PopupSectionBody>
