@@ -5,6 +5,31 @@ export const ProjectSectionContainer = styled.section`
     justify-content: center;
     width: 100%;
     height: 100%;
+    & img.direction-arrow-left {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 50%;  
+        left: 5%; 
+        transform: translate(-50%, -50%);
+        filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 
+        cursor: pointer;
+    }
+    & img.direction-arrow-right  {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 50%;  
+        left: 95%; 
+        transform: translate(-50%, -50%);
+        filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 
+        cursor: pointer;       
+    }
+
+    & > img:hover {
+        filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8);
+        transition: 0.3s;
+    }   
 `
 export const Cards = styled.section`
     display: inline-flex;
@@ -24,7 +49,6 @@ export const ProjectCard = styled.div`
     box-shadow: 0px 0px 15px black;
     color: aliceblue;
     font-weight: 400;
-    transition: 5s ease-in-out;
 `
 
 export const ProjectCardImgSection = styled.div`
