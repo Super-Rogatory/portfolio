@@ -24,6 +24,7 @@ export const ProjectCard = styled.div`
     box-shadow: 0px 0px 15px black;
     color: aliceblue;
     font-weight: 400;
+    transition: 5s ease-in-out;
 `
 
 export const ProjectCardImgSection = styled.div`
@@ -37,7 +38,7 @@ export const ProjectCardImgSection = styled.div`
         width: 100%;
         border-radius: 5px 5px 0px 0px;
         filter: opacity(1) brightness(75%); 
-        transition: 0.3s ease-in-out;
+        transition: 0.5s ease-in-out;
     }
 
    ${props => props.dim ? 
@@ -53,10 +54,6 @@ export const ProjectCardImgSection = styled.div`
         }
         `
     }
-    & label:hover {
-        background-color: rgba(153,168,232,0.5);
-        color: rgba(41,45,62,255); 
-    }
 `
 
 export const ProjectCardDescription = styled.div`
@@ -67,7 +64,7 @@ export const ProjectCardDescription = styled.div`
     height: 17%; 
     border-bottom: 1px solid black;
     background-color: rgba(153,168,232,0.1);
-    color: aliceblue;
+    color: #D3D3D3;  
     & h1 {
         margin: 5px 0px 0px 15px;
         padding: 0px;
@@ -80,7 +77,7 @@ export const ProjectCardDescription = styled.div`
         margin: 0px 0px 0px 15px; 
         padding: 0px 5px 0px 0px;
         font-size: 0.55rem;
-        width: calc(100% - 20px);   
+        width: calc(100% - 20px);  
     }
 
 `
@@ -90,20 +87,38 @@ export const ProjectCardTechnologiesList = styled.div`
     justify-content: center;
     align-items: center;
     height: 8%; 
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     border-radius: 0px 0px 5px 5px;
     font-weight: 600;
-
     background-color: rgba(153,168,232,0.1);
-    color: aliceblue;
+    color: #D3D3D3;
 `
 
 export const SpecialButton = styled.label`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     position: absolute;
     border: 2px solid rgba(153,168,232,0.1);
     border-radius: 8px;
-    background-color: rgba(41,45,62,255);
-    font-weight: 800;
-    width: 200px;
+    width: 225px;
     height: 50px;
+    transition: 0.5 ease-in;
+    & a {
+        margin: 0px;
+        padding: 0px;
+        width: 35px;
+        height: 35px;
+    }
+    & img {
+        width: 35px;
+        height: 35px;
+        filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8);
+        cursor: pointer;
+    }
+
+    & img:hover {
+        filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8);
+        transition: 0.3s;
+    }    
 `
