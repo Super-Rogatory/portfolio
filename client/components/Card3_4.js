@@ -6,10 +6,12 @@ import {
     ProjectCardTechnologiesList,
     SpecialButton,
 } from "../styles/ProjectCard.style";
-import dinoguys from "../icons/dinoguys.png";
-import chatterly from "../icons/chatterly.png";
+import fortyfivepercent from "../icons/fortyfivepercent.png";
+import wordle_backend from "../icons/wordlebackend.png";
 import github from "../icons/github.png";
-import external_link from "../icons/external_link.png";
+import nav_left_arrow from "../icons/nav_left_arrow.png";
+import { connect } from 'react-redux';
+import { forwardPage } from "../store/actions/actionCreators";
 
 class Card3_4 extends React.Component {
     constructor(props) {
@@ -17,7 +19,6 @@ class Card3_4 extends React.Component {
         this.state = {
             onImgHover: false,
             imageNumber: 3,
-            showNextTwoProjects: false,
         };
     }
 
@@ -31,16 +32,23 @@ class Card3_4 extends React.Component {
 
     render() {
         const { imageNumber, onImgHover } = this.state;
+        const { prevTwo, showNextTwoProjects } = this.props;
         return (
             <>
+                <img
+                    className="direction-arrow-left"
+                    src={nav_left_arrow}
+                    alt="a left arrow for navigation"
+                    onClick={() => prevTwo(showNextTwoProjects)}
+                ></img>                
                 <ProjectCard>
                     <ProjectCardImgSection
                         dim={onImgHover && imageNumber === 3 ? 1 : 0}
                         onMouseLeave={() => this.hoverImage(false, 3)}
                     >
                         <img
-                            src={dinoguys}
-                            alt="picture of dino guys game"
+                            src={fortyfivepercent}
+                            alt="picture of forty five percent classifier program"
                             onMouseEnter={() => this.hoverImage(true, 3)}
                         ></img>
                         {onImgHover && imageNumber === 3 && (
@@ -70,8 +78,8 @@ class Card3_4 extends React.Component {
                         onMouseLeave={() => this.hoverImage(false, 4)}
                     >
                         <img
-                            src={chatterly}
-                            alt="picture of chatterly application"
+                            src={wordle_backend}
+                            alt="picture of wordle_backend application"
                             onMouseEnter={() => this.hoverImage(true, 4)}
                         ></img>
                         {onImgHover && imageNumber === 4 && (
@@ -93,7 +101,7 @@ class Card3_4 extends React.Component {
                     </ProjectCardDescription>
                     <ProjectCardTechnologiesList>
                         <span>
-                            FastAPI SQLite Redis Foreman Uvicorn Traefik
+                            Python FastAPI SQLite Redis Foreman Uvicorn Traefik
                         </span>
                     </ProjectCardTechnologiesList>
                 </ProjectCard>
@@ -101,5 +109,17 @@ class Card3_4 extends React.Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        showNextTwoProjects: state.showNextTwoProjects
+    }
+}
 
-export default Card3_4;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        prevTwo: (status) => dispatch(forwardPage(status))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Card3_4);
+

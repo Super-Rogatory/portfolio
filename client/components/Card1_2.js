@@ -6,10 +6,14 @@ import {
     ProjectCardTechnologiesList,
     SpecialButton,
 } from "../styles/ProjectCard.style";
+import MediaQuery from 'react-responsive';
 import dinoguys from "../icons/dinoguys.png";
 import chatterly from "../icons/chatterly.png";
 import github from "../icons/github.png";
 import external_link from "../icons/external_link.png";
+import nav_right_arrow from "../icons/nav_right_arrow.png";
+import { connect } from 'react-redux';
+import { rewindPage } from "../store/actions/actionCreators";
 
 class Cards1_2 extends React.Component {
     constructor(props) {
@@ -17,7 +21,6 @@ class Cards1_2 extends React.Component {
         this.state = {
             onImgHover: false,
             imageNumber: 1,
-            showNextTwoProjects: false,
         };
     }
 
@@ -31,8 +34,20 @@ class Cards1_2 extends React.Component {
 
     render() {
         const { imageNumber, onImgHover } = this.state;
+        const { nextTwo, showNextTwoProjects} = this.props;
         return (
             <>
+            <MediaQuery maxWidth={1268}>
+                Hi
+            </MediaQuery>
+
+            <MediaQuery minWidth={1269}>
+                <img
+                    className="direction-arrow-right"
+                    src={nav_right_arrow}
+                    alt="a right arrow for navigation"
+                    onClick={() => nextTwo(showNextTwoProjects)}
+                ></img>
                 <ProjectCard>
                     <ProjectCardImgSection
                         dim={onImgHover && imageNumber === 1 ? 1 : 0}
@@ -119,9 +134,22 @@ class Cards1_2 extends React.Component {
                         </span>
                     </ProjectCardTechnologiesList>
                 </ProjectCard>
+            </MediaQuery>
             </>
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        showNextTwoProjects: state.showNextTwoProjects
+    }
+}
 
-export default Cards1_2;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        nextTwo: (status) => dispatch(rewindPage(status))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cards1_2);
+

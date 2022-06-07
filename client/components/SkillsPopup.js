@@ -14,8 +14,8 @@ import logo from "../icons/logo(2).png";
 import exit from "../icons/exit_icon.png";
 import arrow from "../icons/right_arrow.png";
 import Typewriter from 'typewriter-effect';
-import { TOGGLE_POPUP } from "../store/actions/actionTypes";
 import { connect } from "react-redux";
+import { togglePopup } from "../store/actions/actionCreators";
 
 class SkillsPopup extends React.Component {
     constructor(props) {
@@ -94,7 +94,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        togglePopup: () => dispatch({ type: TOGGLE_POPUP, status: false })
+        togglePopup: () => dispatch(togglePopup(false))
     }
 }
 

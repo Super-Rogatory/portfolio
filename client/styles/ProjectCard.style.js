@@ -5,6 +5,13 @@ export const ProjectSectionContainer = styled.section`
     justify-content: center;
     width: 100%;
     height: 100%;
+`
+export const Cards = styled.section`
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
     & img.direction-arrow-left {
         position: absolute;
         width: 32px;
@@ -12,6 +19,7 @@ export const ProjectSectionContainer = styled.section`
         top: 50%;  
         left: 5%; 
         transform: translate(-50%, -50%);
+        transition: 1s ease-in-out;
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 
         cursor: pointer;
     }
@@ -22,6 +30,7 @@ export const ProjectSectionContainer = styled.section`
         top: 50%;  
         left: 95%; 
         transform: translate(-50%, -50%);
+        transition: 1s ease-in-out;
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 
         cursor: pointer;       
     }
@@ -29,14 +38,7 @@ export const ProjectSectionContainer = styled.section`
     & > img:hover {
         filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8);
         transition: 0.3s;
-    }   
-`
-export const Cards = styled.section`
-    display: inline-flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: space-evenly;
+    }     
 `
 
 export const ProjectCard = styled.div`
@@ -49,6 +51,10 @@ export const ProjectCard = styled.div`
     box-shadow: 0px 0px 15px black;
     color: aliceblue;
     font-weight: 400;
+
+    @media only screen and (max-width: 1500px) {
+        width: 505px;
+    }
 `
 
 export const ProjectCardImgSection = styled.div`
@@ -116,6 +122,9 @@ export const ProjectCardTechnologiesList = styled.div`
     font-weight: 600;
     background-color: rgba(153,168,232,0.1);
     color: #D3D3D3;
+    @media only screen and (max-width: 1500px) {
+        font-size: 0.6rem;
+    }
 `
 
 export const SpecialButton = styled.label`

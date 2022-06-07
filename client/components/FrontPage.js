@@ -13,6 +13,7 @@ import headshot from "../icons/headshot.png";
 import SkillsPopup from "./SkillsPopup";
 import { TOGGLE_POPUP } from "../store/actions/actionTypes";
 import { connect } from "react-redux";
+import { togglePopup } from "../store/actions/actionCreators";
 
 class FrontPage extends React.Component {
     constructor(props) {
@@ -66,7 +67,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
       // dispatching plain actions
-        togglePopup: () => dispatch({ type: TOGGLE_POPUP, status: true }),
+        togglePopup: () => dispatch(togglePopup(true)),
     }
 }
 

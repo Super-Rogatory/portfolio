@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
-import { toggleStatus } from "./effects";
+import { nextTwoProjectsStatus, toggleStatus } from "./effects";
 
 const rootReducer = combineReducers({
-    openPopup: toggleStatus
+    openPopup: toggleStatus,
+    showNextTwoProjects: nextTwoProjectsStatus
 });
 
 export default rootReducer;
