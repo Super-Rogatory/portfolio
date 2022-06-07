@@ -55,6 +55,10 @@ export const ProjectCard = styled.div`
     @media only screen and (max-width: 1500px) {
         width: 505px;
     }
+    @media only screen and (max-height: 530px) {
+        height: 50%;
+    } 
+
 `
 
 export const ProjectCardImgSection = styled.div`
@@ -84,6 +88,11 @@ export const ProjectCardImgSection = styled.div`
         }
         `
     }
+
+    @media only screen and (max-height: 750px) and (min-height: 531px) {
+        height: 72%;
+    }  
+
 `
 
 export const ProjectCardDescription = styled.div`
@@ -109,7 +118,16 @@ export const ProjectCardDescription = styled.div`
         font-size: 0.55rem;
         width: calc(100% - 20px);  
     }
+    @media only screen and (max-height: 530px) {
+        overflow: hidden;
+        height: 50%;
+    }
 
+    @media only screen and (max-height: 750px) and (min-height: 531px) {
+        height: 20%;
+    }
+
+  
 `
 
 export const ProjectCardTechnologiesList = styled.div`
@@ -125,6 +143,11 @@ export const ProjectCardTechnologiesList = styled.div`
     @media only screen and (max-width: 1500px) {
         font-size: 0.6rem;
     }
+    @media only screen and (max-height: 530px) {
+        overflow: hidden;
+        height: 50%;   
+    }
+
 `
 
 export const SpecialButton = styled.label`

@@ -49,35 +49,37 @@ class Cards1_2 extends React.Component {
                     onClick={() => nextTwo(showNextTwoProjects)}
                 ></img>
                 <ProjectCard>
-                    <ProjectCardImgSection
-                        dim={onImgHover && imageNumber === 1 ? 1 : 0}
-                        onMouseLeave={() => this.hoverImage(false, 1)}
-                    >
-                        <img
-                            src={dinoguys}
-                            alt="picture of dino guys game"
-                            onMouseEnter={() => this.hoverImage(true, 1)}
-                        ></img>
-                        {onImgHover && imageNumber === 1 && (
-                            <SpecialButton>
-                                <a
-                                    href="https://github.com/potatoes-team/dinoguys"
-                                    target="_blank"
-                                >
-                                    <img src={github} alt="github icon" />
-                                </a>
-                                <a
-                                    href="https://dinoguys.herokuapp.com"
-                                    target="_blank"
-                                >
-                                    <img
-                                        src={external_link}
-                                        alt="external link icon"
-                                    />
-                                </a>
-                            </SpecialButton>
-                        )}
-                    </ProjectCardImgSection>
+                    <MediaQuery minHeight={530}>
+                        <ProjectCardImgSection
+                            dim={onImgHover && imageNumber === 1 ? 1 : 0}
+                            onMouseLeave={() => this.hoverImage(false, 1)}
+                        >                            
+                            <img
+                                src={dinoguys}
+                                alt="picture of dino guys game"
+                                onMouseEnter={() => this.hoverImage(true, 1)}
+                            ></img>
+                            {onImgHover && imageNumber === 1 && (
+                                <SpecialButton>
+                                    <a
+                                        href="https://github.com/potatoes-team/dinoguys"
+                                        target="_blank"
+                                    >
+                                        <img src={github} alt="github icon" />
+                                    </a>
+                                    <a
+                                        href="https://dinoguys.herokuapp.com"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src={external_link}
+                                            alt="external link icon"
+                                        />
+                                    </a>
+                                </SpecialButton>
+                            )}
+                        </ProjectCardImgSection>
+                    </MediaQuery>
                     <ProjectCardDescription>
                         <h1>DinoGuys</h1>
                         <span>
@@ -91,35 +93,37 @@ class Cards1_2 extends React.Component {
                     </ProjectCardTechnologiesList>
                 </ProjectCard>
                 <ProjectCard>
-                    <ProjectCardImgSection
-                        dim={onImgHover && imageNumber === 2 ? 1 : 0}
-                        onMouseLeave={() => this.hoverImage(false, 2)}
-                    >
-                        <img
-                            src={chatterly}
-                            alt="picture of chatterly application"
-                            onMouseEnter={() => this.hoverImage(true, 2)}
-                        ></img>
-                        {onImgHover && imageNumber === 2 && (
-                            <SpecialButton>
-                                <a
-                                    href="https://github.com/Super-Rogatory/chatterly"
-                                    target="_blank"
-                                >
-                                    <img src={github} alt="github icon" />
-                                </a>
-                                <a
-                                    href="https://wechatterly.herokuapp.com"
-                                    target="_blank"
-                                >
-                                    <img
-                                        src={external_link}
-                                        alt="external link icon"
-                                    />
-                                </a>
-                            </SpecialButton>
-                        )}
-                    </ProjectCardImgSection>
+                    <MediaQuery minHeight={530}>
+                        <ProjectCardImgSection
+                            dim={onImgHover && imageNumber === 2 ? 1 : 0}
+                            onMouseLeave={() => this.hoverImage(false, 2)}
+                        >
+                            <img
+                                src={chatterly}
+                                alt="picture of chatterly application"
+                                onMouseEnter={() => this.hoverImage(true, 2)}
+                            ></img>
+                            {onImgHover && imageNumber === 2 && (
+                                <SpecialButton>
+                                    <a
+                                        href="https://github.com/Super-Rogatory/chatterly"
+                                        target="_blank"
+                                    >
+                                        <img src={github} alt="github icon" />
+                                    </a>
+                                    <a
+                                        href="https://wechatterly.herokuapp.com"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src={external_link}
+                                            alt="external link icon"
+                                        />
+                                    </a>
+                                </SpecialButton>
+                            )}
+                        </ProjectCardImgSection>
+                    </MediaQuery>
                     <ProjectCardDescription>
                         <h1>WeChatterly</h1>
                         <span>

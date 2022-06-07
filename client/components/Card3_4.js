@@ -6,6 +6,7 @@ import {
     ProjectCardTechnologiesList,
     SpecialButton,
 } from "../styles/ProjectCard.style";
+import MediaQuery from 'react-responsive';
 import fortyfivepercent from "../icons/fortyfivepercent.png";
 import wordle_backend from "../icons/wordlebackend.png";
 import github from "../icons/github.png";
@@ -42,26 +43,28 @@ class Card3_4 extends React.Component {
                     onClick={() => prevTwo(showNextTwoProjects)}
                 ></img>                
                 <ProjectCard>
-                    <ProjectCardImgSection
-                        dim={onImgHover && imageNumber === 3 ? 1 : 0}
-                        onMouseLeave={() => this.hoverImage(false, 3)}
-                    >
-                        <img
-                            src={fortyfivepercent}
-                            alt="picture of forty five percent classifier program"
-                            onMouseEnter={() => this.hoverImage(true, 3)}
-                        ></img>
-                        {onImgHover && imageNumber === 3 && (
-                            <SpecialButton>
-                                <a
-                                    href="https://github.com/super-rogatory/thepercentfortyfive"
-                                    target="_blank"
-                                >
-                                    <img src={github} alt="github icon" />
-                                </a>
-                            </SpecialButton>
-                        )}
-                    </ProjectCardImgSection>
+                    <MediaQuery minHeight={530}>
+                        <ProjectCardImgSection
+                            dim={onImgHover && imageNumber === 3 ? 1 : 0}
+                            onMouseLeave={() => this.hoverImage(false, 3)}
+                        >
+                            <img
+                                src={fortyfivepercent}
+                                alt="picture of forty five percent classifier program"
+                                onMouseEnter={() => this.hoverImage(true, 3)}
+                            ></img>
+                            {onImgHover && imageNumber === 3 && (
+                                <SpecialButton>
+                                    <a
+                                        href="https://github.com/super-rogatory/thepercentfortyfive"
+                                        target="_blank"
+                                    >
+                                        <img src={github} alt="github icon" />
+                                    </a>
+                                </SpecialButton>
+                            )}
+                        </ProjectCardImgSection>
+                    </MediaQuery>                        
                     <ProjectCardDescription>
                         <h1>Percent 45</h1>
                         <span>
@@ -73,26 +76,28 @@ class Card3_4 extends React.Component {
                     </ProjectCardTechnologiesList>
                 </ProjectCard>
                 <ProjectCard>
-                    <ProjectCardImgSection
-                        dim={onImgHover && imageNumber === 4 ? 1 : 0}
-                        onMouseLeave={() => this.hoverImage(false, 4)}
-                    >
-                        <img
-                            src={wordle_backend}
-                            alt="picture of wordle_backend application"
-                            onMouseEnter={() => this.hoverImage(true, 4)}
-                        ></img>
-                        {onImgHover && imageNumber === 4 && (
-                            <SpecialButton>
-                                <a
-                                    href="https://github.com/super-rogatory/wordle_backend"
-                                    target="_blank"
-                                >
-                                    <img src={github} alt="github icon" />
-                                </a>
-                            </SpecialButton>
-                        )}
-                    </ProjectCardImgSection>
+                    <MediaQuery minHeight={530}>
+                        <ProjectCardImgSection
+                            dim={onImgHover && imageNumber === 4 ? 1 : 0}
+                            onMouseLeave={() => this.hoverImage(false, 4)}
+                        >
+                            <img
+                                src={wordle_backend}
+                                alt="picture of wordle_backend application"
+                                onMouseEnter={() => this.hoverImage(true, 4)}
+                            ></img>
+                            {onImgHover && imageNumber === 4 && (
+                                <SpecialButton>
+                                    <a
+                                        href="https://github.com/super-rogatory/wordle_backend"
+                                        target="_blank"
+                                    >
+                                        <img src={github} alt="github icon" />
+                                    </a>
+                                </SpecialButton>
+                            )}
+                        </ProjectCardImgSection>
+                    </MediaQuery>
                     <ProjectCardDescription>
                         <h1>Wordle Backend</h1>
                         <span>
