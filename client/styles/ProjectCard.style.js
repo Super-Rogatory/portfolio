@@ -51,11 +51,15 @@ export const ProjectCard = styled.div`
     box-shadow: 0px 0px 15px black;
     color: aliceblue;
     font-weight: 400;
-
-    @media only screen and (max-width: 1500px) {
-        width: 505px;
+    ${(props) => props.type === "standard_view" && 
+        `
+        @media only screen and (max-width: 1500px) {
+            width: 505px;
+        }
+        `
     }
-    @media only screen and (max-height: 530px) {
+
+    @media only screen and (max-height: 529px) {
         height: 50%;
     } 
 
@@ -89,7 +93,7 @@ export const ProjectCardImgSection = styled.div`
         `
     }
 
-    @media only screen and (max-height: 750px) and (min-height: 531px) {
+    @media only screen and (max-height: 750px) and (min-height: 529px) {
         height: 72%;
     }  
 
@@ -118,12 +122,13 @@ export const ProjectCardDescription = styled.div`
         font-size: 0.55rem;
         width: calc(100% - 20px);  
     }
-    @media only screen and (max-height: 530px) {
+    
+    @media only screen and (max-height: 529px) {
         overflow: hidden;
-        height: 50%;
+        height: 50%;      
     }
 
-    @media only screen and (max-height: 750px) and (min-height: 531px) {
+    @media only screen and (max-height: 750px) and (min-height: 530px) {
         height: 20%;
     }
 
@@ -134,18 +139,22 @@ export const ProjectCardTechnologiesList = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 8%; 
     font-size: 0.75rem;
     border-radius: 0px 0px 5px 5px;
     font-weight: 600;
     background-color: rgba(153,168,232,0.1);
     color: #D3D3D3;
+    text-align: center;
+    
     @media only screen and (max-width: 1500px) {
         font-size: 0.6rem;
     }
-    @media only screen and (max-height: 530px) {
+    @media only screen and (max-height: 529px) {
         overflow: hidden;
-        height: 50%;   
+        height: 50%; 
+        font-size: 0.8rem;
     }
 
 `

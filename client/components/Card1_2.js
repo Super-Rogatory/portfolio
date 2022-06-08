@@ -37,18 +37,13 @@ class Cards1_2 extends React.Component {
         const { nextTwo, showNextTwoProjects} = this.props;
         return (
             <>
-            <MediaQuery maxWidth={1268}>
-                Hi
-            </MediaQuery>
-
-            <MediaQuery minWidth={1269}>
                 <img
                     className="direction-arrow-right"
                     src={nav_right_arrow}
                     alt="a right arrow for navigation"
                     onClick={() => nextTwo(showNextTwoProjects)}
                 ></img>
-                <ProjectCard>
+                <ProjectCard type="standard_view">
                     <MediaQuery minHeight={530}>
                         <ProjectCardImgSection
                             dim={onImgHover && imageNumber === 1 ? 1 : 0}
@@ -92,7 +87,7 @@ class Cards1_2 extends React.Component {
                         <span>JavaScript Express Phaser3 Socket.IO Tiled</span>
                     </ProjectCardTechnologiesList>
                 </ProjectCard>
-                <ProjectCard>
+                <ProjectCard type="standard_view">
                     <MediaQuery minHeight={530}>
                         <ProjectCardImgSection
                             dim={onImgHover && imageNumber === 2 ? 1 : 0}
@@ -138,8 +133,7 @@ class Cards1_2 extends React.Component {
                         </span>
                     </ProjectCardTechnologiesList>
                 </ProjectCard>
-            </MediaQuery>
-            </>
+            </>            
         );
     }
 }

@@ -42,7 +42,7 @@ class Card3_4 extends React.Component {
                     alt="a left arrow for navigation"
                     onClick={() => prevTwo(showNextTwoProjects)}
                 ></img>                
-                <ProjectCard>
+                <ProjectCard type="standard_view">
                     <MediaQuery minHeight={530}>
                         <ProjectCardImgSection
                             dim={onImgHover && imageNumber === 3 ? 1 : 0}
@@ -75,7 +75,7 @@ class Card3_4 extends React.Component {
                         <span>Python TensorFlow Keras FastAPI Foreman Uvicorn</span>
                     </ProjectCardTechnologiesList>
                 </ProjectCard>
-                <ProjectCard>
+                <ProjectCard type="standard_view">
                     <MediaQuery minHeight={530}>
                         <ProjectCardImgSection
                             dim={onImgHover && imageNumber === 4 ? 1 : 0}
