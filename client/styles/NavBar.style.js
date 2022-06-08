@@ -24,10 +24,19 @@ export const ClickablePhotoOfMe = styled.div`
     & img {
         width: 65px;
         height: 65px;
+        max-height: 10vh;
         filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8); 
     } 
     & img:hover {
         transform: scale(1.2);
+    }
+    @media only screen and (max-height: 650px) {        
+        & img {
+            width: 100%;
+            height: 100%; 
+            min-height: 32px;
+            min-width: 32px;
+        } 
     }
 
 `
@@ -40,14 +49,15 @@ export const ClickableMenu = styled.div`
         width: 600px;
         margin: 0;
         padding: 0;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 500;
         list-style: none;
         color: aliceblue;
     }
     & span {
         color: #99a8e8;
-    }
+    }   
+
     & li:hover {
         color: #99a8e8;
         transition: 0.5s;
