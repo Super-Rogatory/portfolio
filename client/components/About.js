@@ -26,7 +26,7 @@ class About extends React.Component {
                             <AboutTextContainer>
                                 <p>
                                     Hi! My name is Chukwudi Ikem and I am a first generation Nigerian American with the hopes of learning more about
-                                    the mystery that is computers. I have an interest in Web Development that started after my coding bootcamp
+                                    the mystery that are computers. I have an interest in Web Development that started after my coding bootcamp
                                     at FullStack Academy in 2021.
                                 </p>
                                 <p>
@@ -34,7 +34,7 @@ class About extends React.Component {
                                     and an apology to my father. There will always be something intrinsically fascinating about typing onto a mechanical keyboard and text appearing on the screen.
                                 </p>
                                 <p>
-                                    Futhermore, learning Web Development from front to back end, is very rewarding and I hope that I might continue to learn and improve on my skills.
+                                    Futhermore, learning Web Development from front to back end is very rewarding and I hope that I might continue to learn and improve on my skills.
                                 </p>
                                 <p>
                                     P.S. I have more personality than that serious picture conveys, check out my TikTok page to see my goofy side!

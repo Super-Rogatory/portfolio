@@ -18,8 +18,8 @@ class Contact extends React.Component {
                 <BodyContainer>
                     <ContactSectionContainer>
                         <h1 style={{ color: "aliceblue" }}>Connect.</h1>
-                        <p style={{ color: "#D3D3D3" }}>
-                            {`I am currently looking for any new grad opportunities. I would prefer a job as a web developer considering it is my passion, but honestly, 
+                        <p style={{ color: "#D3D3D3", textAlign: "center" }}>
+                            {`I am currently looking for new grad opportunities. I would prefer a job as a web developer considering it is my passion, but honestly, 
                         code is code and I will not restrict myself to certain endeavors. Feel free to email me using the button below.`}
                         </p>
                         <Button onClick={() => window.location = 'mailto:chukwudimikem@gmail.com'} size="small">
