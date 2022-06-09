@@ -78,7 +78,7 @@ export const Button = styled.button`
     background-color: rgba(41,45,62,255);
     font-weight: 800;
     width: ${(props) => props.size === "small" ? 100 : 200}px;
-    height: 50px;
+    min-height: 50px;
     cursor: pointer;
     &:hover {
         background-color: rgba(153,168,232,0.1);

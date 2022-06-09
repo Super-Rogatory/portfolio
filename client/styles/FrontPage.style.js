@@ -105,13 +105,6 @@ export const ImgContainer = styled.div`
         height: 450px; 
     }
 
-    @media only screen and (max-height: 640px) {
-        & img {
-            width: 180px;
-            height: 250px;        
-        }
-    }
-
     @media only screen and (max-width: 1020px) {
         & img {
             width: 100%;

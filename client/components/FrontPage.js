@@ -27,7 +27,7 @@ class FrontPage extends React.Component {
                 <GlobalStyles />
                 <NavBar />
                 {openPopup && <SkillsPopup />}
-                <MediaQuery minHeight={300} maxHeight={550}>
+                <MediaQuery minHeight={500} maxHeight={550}>
                     <BodyContainer>
                         <ImgContainer dim={openPopup}>
                                 <img
