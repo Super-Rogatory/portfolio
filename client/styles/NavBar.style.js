@@ -16,10 +16,10 @@ export const NavBarContainer = styled.div`
 
 export const ClickablePhotoOfMe = styled.div`
     width: 100px;
-    height: 10vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     & img {
         width: 55px;
@@ -33,10 +33,17 @@ export const ClickablePhotoOfMe = styled.div`
     @media only screen and (max-height: 450px) {        
         & img {
             width: 100%;
-            height: 100%;
-            
+            height: 100%; 
+            min-width: 25px;
+            min-height: 25px;      
         } 
     }
+    @media only screen and (min-height: 1050px) {        
+        & img {
+            width: 65px;
+            height: 65px;            
+        } 
+    }    
 
 `
 

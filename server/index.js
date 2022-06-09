@@ -7,7 +7,7 @@ const PORT = 8000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// mount public folder so that index.html can make sure of the bundled js file
+// mount public folder so that index.html can make use of the bundled js file
 app.use(express.static(path.resolve(__dirname, "../public")));
 
 app.get("/resume.pdf", (req, res) => {
