@@ -8,6 +8,7 @@ export const FullNavBar = styled.div`
     margin: auto;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 `;
 
 export const NavBarContainer = styled.div`

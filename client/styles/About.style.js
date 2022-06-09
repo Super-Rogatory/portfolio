@@ -30,6 +30,12 @@ export const AboutTextContainer = styled.section`
     @media only screen and (max-width: 1325px) and (max-height: 600px) {
         width: 80%;
         & p {
+            font-size: 12px;
+        }
+    }
+    @media only screen and (max-width: 1325px) and (min-height: 600px) {
+        width: 80%;
+        & p {
             font-size: 14px;
         }
     }
@@ -39,18 +45,18 @@ export const AboutTextContainer = styled.section`
             font-size: 18px;
         }
     }
-    @media only screen and (max-height: 700px) {
+    @media only screen and (min-width: 1325px) and (max-height: 700px) {
         width: 80%;
         & p {
             font-size: 14px;
         }
-    }        
-    @media only screen and (max-width: 1200px) and (min-height: 700px) {
-        width: 80%;
+    }            
+    @media only screen and (min-width: 1325px) and (min-height: 1000px) {
+        width: 85%;
         & p {
-            font-size: 14px;
+            font-size: 24px;
         }
-    }   
+    }
 
 `
 

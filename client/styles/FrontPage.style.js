@@ -19,6 +19,8 @@ export const BodySectionContainer = styled.section`
     width: 65%;
     height: 100%;
     justify-content: center;
+    overflow: hidden;
+
     & h6 {
         margin-top: 20px;
         margin-bottom: 0px;
@@ -96,6 +98,7 @@ export const ImgContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     & img {
         filter: opacity(1) drop-shadow(-5px 9px 5px #D3D3D3) brightness(${(props) => props.dim ? 25 : 100}%) blur(${(props) => props.dim ? 10 : 0}px);
     }

@@ -15,14 +15,14 @@ class About extends React.Component {
                 <NavBar />
                 <BodyContainer>
                     <AboutContainer>
-                        <MediaQuery maxHeight={564}>
+                        <MediaQuery maxHeight={400}>
                             <AboutTextContainer>
                                 <p>
                                    Maximize browser page for more information! 
                                 </p>                                
                             </AboutTextContainer>
                         </MediaQuery>
-                        <MediaQuery minHeight={565}>
+                        <MediaQuery minHeight={401}>
                             <AboutTextContainer>
                                 <p>
                                     Hi! My name is Chukwudi Ikem and I am a first generation Nigerian American with the hopes of learning more about

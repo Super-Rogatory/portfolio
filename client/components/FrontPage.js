@@ -27,20 +27,14 @@ class FrontPage extends React.Component {
                 <GlobalStyles />
                 <NavBar />
                 {openPopup && <SkillsPopup />}
-                <MediaQuery minHeight={500} maxHeight={550}>
-                    <BodyContainer>
-                        <ImgContainer dim={openPopup}>
-                                <img
-                                    src={headshot}
-                                    alt="artistic photo of Chukwudi Ikem"
-                                />
-                            </ImgContainer>
-                    </BodyContainer>
-                </MediaQuery>
-                <MediaQuery minHeight={550}>
+
+                <MediaQuery minWidth={769}>
                     <BodyContainer>
                         <BodySectionContainer>
-                            <h6>Hello there! My name is</h6>
+                            <MediaQuery minHeight={600}>
+                                <h6>Hello there! My name is</h6>
+                            </MediaQuery>
+                            
                             <h1 style={{ color: "aliceblue" }}>Chukwudi Ikem.</h1>
                             <h1 style={{ color: "#D3D3D3" }}>
                                 I am a new grad software engineer.
@@ -52,9 +46,11 @@ class FrontPage extends React.Component {
                                 from Fullstack Academy. I strive to learn and grow
                                 as a developer because programming is fun!
                             </p>
-                            <Button size="long" onClick={() => togglePopup() }>
-                                <span>Current Skills</span>
-                            </Button>
+                            <MediaQuery minHeight={500}>
+                                <Button size="long" onClick={() => togglePopup() }>
+                                    <span>Current Skills</span>
+                                </Button>
+                            </MediaQuery>
                         </BodySectionContainer>
                         <ImgContainer dim={openPopup}>
                             <img
