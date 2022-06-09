@@ -11,11 +11,11 @@ export const AboutContainer = styled.div`
 export const AboutTextContainer = styled.section`
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 60%;
     height: 100%;
     padding: 0px 20px 0px 0px;
-  
+    max-height: 600px;
     & p {
         color: aliceblue;
         font-size: 18px;

@@ -22,20 +22,19 @@ export const ClickablePhotoOfMe = styled.div`
     justify-content: flex-end;
     align-items: center;
     & img {
-        width: 65px;
-        height: 65px;
+        width: 55px;
+        height: 55px;
         max-height: 10vh;
         filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8); 
     } 
     & img:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
-    @media only screen and (max-height: 650px) {        
+    @media only screen and (max-height: 450px) {        
         & img {
             width: 100%;
-            height: 100%; 
-            min-height: 32px;
-            min-width: 32px;
+            height: 100%;
+            
         } 
     }
 

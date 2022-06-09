@@ -15,7 +15,7 @@ class About extends React.Component {
                 <NavBar />
                 <BodyContainer>
                     <AboutContainer>
-                        <MediaQuery maxHeight={565}>
+                        <MediaQuery maxHeight={564}>
                             <AboutTextContainer>
                                 <p>
                                    Maximize browser page for more information! 
