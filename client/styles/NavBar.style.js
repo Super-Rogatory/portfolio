@@ -5,10 +5,10 @@ export const FullNavBar = styled.div`
     color: #616b93;
     width: 95%;
     height: 15vh;
+    min-height: 60px;
     margin: auto;
     justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
+    align-items: center;    
 `;
 
 export const NavBarContainer = styled.div`

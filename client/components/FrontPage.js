@@ -27,11 +27,13 @@ class FrontPage extends React.Component {
                 <GlobalStyles />
                 <NavBar />
                 {openPopup && <SkillsPopup />}
-
-                <MediaQuery minWidth={769}>
+                <MediaQuery maxHeight={270}>
+                    <h6 style={{ color: "aliceblue", textAlign: "center" }}>Expand browser for more information!</h6>
+                </MediaQuery>
+                <MediaQuery minHeight={270} minWidth={769}>
                     <BodyContainer>
                         <BodySectionContainer>
-                            <MediaQuery minHeight={600}>
+                            <MediaQuery minHeight={620}>
                                 <h6>Hello there! My name is</h6>
                             </MediaQuery>
                             
@@ -46,7 +48,7 @@ class FrontPage extends React.Component {
                                 from Fullstack Academy. I strive to learn and grow
                                 as a developer because programming is fun!
                             </p>
-                            <MediaQuery minHeight={500}>
+                            <MediaQuery minHeight={560}>
                                 <Button size="long" onClick={() => togglePopup() }>
                                     <span>Current Skills</span>
                                 </Button>

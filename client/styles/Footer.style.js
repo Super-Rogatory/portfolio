@@ -6,6 +6,7 @@ export const FooterContainer = styled.footer`
     align-items: center;
     width: 100%;
     height: 20vh;
+    min-height: 50px;
     overflow: hidden;   
 `;
 

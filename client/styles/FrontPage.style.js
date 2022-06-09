@@ -19,7 +19,6 @@ export const BodySectionContainer = styled.section`
     width: 65%;
     height: 100%;
     justify-content: center;
-    overflow: hidden;
 
     & h6 {
         margin-top: 20px;
@@ -37,7 +36,7 @@ export const BodySectionContainer = styled.section`
     & p {
         margin-top: 30px;
         font-size: 0.6em;
-        width: 500px;
+        max-width: 500px;
         height: 100px;
         line-height: 0.8rem;
         font-weight: 400;
@@ -91,6 +90,9 @@ export const BodySectionContainer = styled.section`
             color: #D3D3D3;
         }        
     }
+    @media only screen and (max-height: 550px) {
+        overflow: hidden;
+    }
    
 `
 
@@ -119,5 +121,12 @@ export const ImgContainer = styled.div`
         & img {
             height: 60%;
         }
-    }     
+    }    
+
+    @media only screen and (max-height: 570px) {
+        & img {
+            width: 100%;
+            height: 75%;
+        }
+    }    
 `
