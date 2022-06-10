@@ -4,7 +4,6 @@ export const Container = styled.div`
     font-weight: 900;
     ${(props) => props.type !== 'mobile' ? `height: 100vh;` : `height: 3000px;`}
     ${(props) => props.type !== 'mobile' ? `width: 100vw;`: `min-width: 485px;`}
-
     background-color: rgba(41,45,62,255);
 `;
 
@@ -114,7 +113,7 @@ export const BodySectionContainer = styled.section`
         justify-content: space-around;
         overflow: hidden;
         & h6 {
-            margin-top: 0px;
+            margin-top: 10px;
             margin-bottom: 10px;
             font-size: .6rem;
             font-weight: 400;

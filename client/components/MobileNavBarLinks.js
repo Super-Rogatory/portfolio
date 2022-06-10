@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import hamburger_icon from '../icons/hamburger_icon.png';
-import { MobileNavBarContainer } from "../styles/MobileNavBar.style";
+import { MobileNavBarContainer } from "../styles/MobileFullPage.style";
 import { Button } from "../styles/NavBar.style";
 
 class MobileNavBarLinks extends React.Component {

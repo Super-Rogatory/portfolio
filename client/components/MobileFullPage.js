@@ -12,6 +12,9 @@ import { connect } from "react-redux";
 import { togglePopup } from "../store/actions/actionCreators";
 import { Button } from "../styles/NavBar.style";
 import SkillsPopup from "./SkillsPopup";
+import portait from '../files/closegradphoto.jpg';
+import { AboutContainer, AboutTextContainer, AboutImageContainer } from "../styles/About.style";
+import { Divider } from "../styles/MobileFullPage.style";
 
 class MobileFullPage extends React.Component {
     constructor(props) {
@@ -27,10 +30,7 @@ class MobileFullPage extends React.Component {
                 {openPopup && <SkillsPopup type="mobile" />}
                 <BodyContainer type="mobile">
                     <BodySectionContainer type="mobile">
-                        <MediaQuery minHeight={420}>
-                            <h6>Hello there! My name is</h6>
-                        </MediaQuery>
-
+                        <h6>Hello there! My name is</h6>
                         <h1 style={{ color: "aliceblue", fontSize: "2rem" }}>Chukwudi Ikem.</h1>
                         <h1 style={{ color: "#D3D3D3", fontSize: "1rem" }}>
                             New grad software engineer.
@@ -42,15 +42,47 @@ class MobileFullPage extends React.Component {
                             from Fullstack Academy. I strive to learn and grow
                             as a developer because programming is fun!
                         </p>
-                        <MediaQuery minHeight={450}>
-                                <Button size="long" onClick={() => togglePopup() }>
-                                    <span>Current Skills</span>
-                                </Button>
-                        </MediaQuery>                        
+                        <Button size="long" onClick={() => togglePopup() }>
+                            <span>Current Skills</span>
+                        </Button>
+                        {/* ------------------------------------------------------------------------------------------------------------- */}
+                        <Divider>
+                            <h2>
+                                <span>01. </span>About
+                            </h2>
+                        </Divider>
+                        <AboutContainer type="mobile">
+                            <AboutTextContainer type="mobile">
+                                <p>
+                                    Hi! My name is Chukwudi Ikem and I am a first generation Nigerian American with the hopes of learning more about
+                                    the mystery that are computers. I have an interest in Web Development that started after my coding bootcamp
+                                    at FullStack Academy in 2021.
+                                </p>
+                                <p>
+                                    Since I was a young boy, I've always had an affinity towards technology. Some of the best memories I have ended with a broken computer
+                                    and an apology to my father. There will always be something intrinsically fascinating about typing onto a mechanical keyboard and text appearing on the screen.
+                                </p>
+                                <p>
+                                    Futhermore, learning Web Development from front to back end is very rewarding and I hope that I might continue to learn and improve on my skills.
+                                </p>
+                                <p>
+                                    P.S. I have more personality than that serious picture conveys, check out my TikTok page to see my goofy side!
+                                </p>                             
+                            </AboutTextContainer>
+                            <AboutImageContainer type="mobile">
+                                <img src={portait} alt="self portrait of graduation photos" />
+                            </AboutImageContainer>
+                        </AboutContainer> 
+                        {/* ------------------------------------------------------------------------------------------------------------- */}
+                        <Divider>
+                            <h2>
+                                <span>02. </span>Projects
+                            </h2>
+                        </Divider>                                                                    
                     </BodySectionContainer>
                     
                 </BodyContainer>
-
+                <Footer type="mobile" />
             </Container>
         );
     }

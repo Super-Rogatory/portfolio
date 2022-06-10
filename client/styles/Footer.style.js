@@ -7,13 +7,19 @@ export const FooterContainer = styled.footer`
     width: 100%;
     height: 20vh;
     min-height: 50px;
-    overflow: hidden;   
+    overflow: hidden; 
+    ${(props) => props.type === 'mobile' && `
+        position: relative;
+        top: 100%;
+        transform: translateY(-100%);
+    `}      
 `;
 
 export const FooterSectionContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     width: 50%;
+
     & a {
         margin: 0px;
         padding: 0px;

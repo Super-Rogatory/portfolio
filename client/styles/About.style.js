@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
     display: inline-flex;
+    ${(props) => props.type === "mobile" && `flex-direction: column;`}
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: ${(props) => props.type !== "mobile" ? 70: 100}%;
     height: 100%;
 `
 
@@ -15,13 +16,14 @@ export const AboutTextContainer = styled.section`
     width: 60%;
     height: 100%;
     padding: 0px 20px 0px 0px;
+    margin: ${(props) => props.type !== "mobile" ? 0 : 15}px 0px;
     max-height: 600px;
     & p {
-        color: aliceblue;
+        color: ${(props) => props.type !== "mobile" ? "aliceblue" : "#D3D3D3"};
         font-size: 18px;
         font-weight: 300;
         overflow: hidden;
-        margin: 5px 0px;
+        margin: 5px ${(props) => props.type !== "mobile" ? 0 : 15}px;
         padding: 0;    
         text-overflow: ellipsis;
         word-wrap: break-word;
@@ -64,7 +66,7 @@ export const AboutImageContainer = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: ${(props) => props.type !== "mobile" ? 40: 80}%;
     height: 100%;
 
     & img {
