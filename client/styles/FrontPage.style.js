@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     font-weight: 900;
-    ${(props) => props.type !== 'mobile' ? `height: 100vh;` : `height: 3000px;`}
+    ${(props) => props.type !== 'mobile' ? `height: 100vh;` : `height: auto;`}
     ${(props) => props.type !== 'mobile' ? `width: 100vw;`: `min-width: 485px;`}
     background-color: rgba(41,45,62,255);
 `;

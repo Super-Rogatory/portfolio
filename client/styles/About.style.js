@@ -15,7 +15,7 @@ export const AboutTextContainer = styled.section`
     justify-content: space-evenly;
     width: 60%;
     height: 100%;
-    padding: 0px 20px 0px 0px;
+    padding: 0px ${(props) => props.type !== "mobile" ? 20 : 0}px 0px 0px;
     margin: ${(props) => props.type !== "mobile" ? 0 : 15}px 0px;
     max-height: 600px;
     & p {

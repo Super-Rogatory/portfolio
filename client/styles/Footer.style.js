@@ -9,9 +9,7 @@ export const FooterContainer = styled.footer`
     min-height: 50px;
     overflow: hidden; 
     ${(props) => props.type === 'mobile' && `
-        position: relative;
-        top: 100%;
-        transform: translateY(-100%);
+        margin-top: 20vh;
     `}      
 `;
 

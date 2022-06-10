@@ -50,6 +50,8 @@ class FullCardList extends React.Component {
 
     render() {
         const { imageNumber, onImgHover, currentProjectNumber } = this.state;
+        const { type } = this.props;
+
         return (
             <>
                 <img
@@ -57,6 +59,7 @@ class FullCardList extends React.Component {
                     src={nav_left_arrow}
                     alt="a left arrow for navigation"
                     onClick={() => this.localMoveTwo({ direction: 'back' })}
+                    type={type}
                 ></img>
 
                 <img
@@ -64,14 +67,16 @@ class FullCardList extends React.Component {
                     src={nav_right_arrow}
                     alt="a right arrow for navigation"
                     onClick={() => this.localMoveTwo({ direction: 'forward' })}
+                    type={type}
                 ></img>                
                 {allCardDescriptions.map((card, index) => 
                     index === currentProjectNumber &&
-                    <ProjectCard type="vertical_view" key={index}>
-                        <MediaQuery minHeight={530}>
+                    <ProjectCard type={type || "standard_view"} key={index}>
+                        <MediaQuery minHeight={type !== 'mobile' ? 530 : 0}>
                             <ProjectCardImgSection
                                 dim={onImgHover && imageNumber === index ? 1 : 0}
                                 onMouseLeave={() => this.hoverImage(false, index)}
+                                type={type || "standard_view"}
                             >                            
                                 <img
                                     src={card.src}
@@ -101,13 +106,13 @@ class FullCardList extends React.Component {
                                 )}
                             </ProjectCardImgSection>
                         </MediaQuery>
-                        <ProjectCardDescription>
+                        <ProjectCardDescription type={type || "standard_view"}>
                             <h1>{card.title}</h1>
                             <span>
                                 {card.description}
                             </span>
                         </ProjectCardDescription>
-                        <ProjectCardTechnologiesList>
+                        <ProjectCardTechnologiesList type={type || "standard_view"}>
                             <span>{card.techStack}</span>
                         </ProjectCardTechnologiesList>
                 </ProjectCard>

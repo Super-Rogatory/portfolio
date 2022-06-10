@@ -4,20 +4,21 @@ export const ProjectSectionContainer = styled.section`
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: ${(props) => props.type !== 'mobile' ? '100%' : '400px'};
 `
 export const Cards = styled.section`
     display: inline-flex;
     width: 100%;
+    ${(props) => props.type === 'mobile' && 'max-width: 400px'};
     height: 100%;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: ${(props) => props.type !== 'mobile' ? 'center' : 'flex-start'};
+    justify-content: ${(props) => props.type !== 'mobile' ? 'space-evenly' : 'center'};
     & img.direction-arrow-left {
         position: absolute;
         width: 32px;
         height: 32px;
-        top: 50%;  
-        left: 5%; 
+        top: ${(props) => props.type !== 'mobile' ? '50' : '75'}%;  
+        left: ${(props) => props.type !== 'mobile' ? '5' : '10'}%;  
         transform: translate(-50%, -50%);
         transition: 1s ease-in-out;
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 
@@ -27,8 +28,8 @@ export const Cards = styled.section`
         position: absolute;
         width: 32px;
         height: 32px;
-        top: 50%;  
-        left: 95%; 
+        top: ${(props) => props.type !== 'mobile' ? '50' : '75'}%;  
+        left: ${(props) => props.type !== 'mobile' ? '95' : '90'}%;  
         transform: translate(-50%, -50%);
         transition: 1s ease-in-out;
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 
@@ -44,7 +45,7 @@ export const Cards = styled.section`
 export const ProjectCard = styled.div`
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: ${(props) => props.type !== 'mobile' ? '600px' : '88% '};
     height: 100%;
     max-height: 500px;
     border-radius: 5px;
@@ -58,10 +59,13 @@ export const ProjectCard = styled.div`
         }
         `
     }
+    height: ${(props) => props.type !== 'mobile' && `
 
-    @media only screen and (max-height: 530px) {
-        height: 50%;
-    } 
+        @media only screen and (max-height: 530px) {
+            height: 50%;
+        }     
+    `};
+
 
 `
 
@@ -69,7 +73,7 @@ export const ProjectCardImgSection = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75%;
+    height: ${(props) => props.type !== 'mobile' ? '75%' : '65%'};
     & img {
         object-fit: cover;
         height: 100%;
@@ -93,9 +97,11 @@ export const ProjectCardImgSection = styled.div`
         `
     }
 
-    @media only screen and (max-height: 750px) and (min-height: 530px) {
-        height: 72%;
-    }  
+    ${props => props.type !== 'mobile' && 
+        `@media only screen and (max-height: 750px) and (min-height: 530px) {
+            height: 72%;
+        }`
+    }
 
 `
 
@@ -104,7 +110,7 @@ export const ProjectCardDescription = styled.div`
     justify-content: space-evenly;
     flex-direction: column;
     width: 100%;
-    height: 17%; 
+    height: ${(props) => props.type !== 'mobile' ? '17%' : '22%'};
     border-bottom: 1px solid black;
     background-color: rgba(153,168,232,0.1);
     color: #D3D3D3;  
@@ -122,17 +128,18 @@ export const ProjectCardDescription = styled.div`
         font-size: 0.55rem;
         width: calc(100% - 20px);  
     }
-    
-    @media only screen and (max-height: 530px) {
-        overflow: hidden;
-        height: 50%;      
-    }
+    ${props => props.type !== 'mobile' && 
+        `    
+            @media only screen and (max-height: 530px) {
+                overflow: hidden;
+                height: 50%;      
+            }
 
-    @media only screen and (max-height: 750px) and (min-height: 530px) {
-        height: 20%;
+            @media only screen and (max-height: 750px) and (min-height: 530px) {
+                height: 20%;
+            }
+        `
     }
-
-  
 `
 
 export const ProjectCardTechnologiesList = styled.div`
@@ -140,22 +147,26 @@ export const ProjectCardTechnologiesList = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 8%; 
+    height: ${(props) => props.type !== 'mobile' ? '8%' : '13%'};
     font-size: 0.75rem;
     border-radius: 0px 0px 5px 5px;
     font-weight: 600;
     background-color: rgba(153,168,232,0.1);
     color: #D3D3D3;
     text-align: center;
-    
-    @media only screen and (max-width: 1500px) {
-        font-size: 0.6rem;
-    }
-    @media only screen and (max-height: 530px) {
-        overflow: hidden;
-        height: 50%; 
-        font-size: 0.8rem;
-    }
+
+    ${props => props.type !== 'mobile' && 
+        `    
+        @media only screen and (max-width: 1500px) {
+            font-size: 0.6rem;
+        }
+        @media only screen and (max-height: 530px) {
+            overflow: hidden;
+            height: 50%; 
+            font-size: 0.8rem;
+        }
+        `
+    }    
 
 `
 

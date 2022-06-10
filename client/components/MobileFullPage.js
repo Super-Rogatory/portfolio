@@ -14,7 +14,11 @@ import { Button } from "../styles/NavBar.style";
 import SkillsPopup from "./SkillsPopup";
 import portait from '../files/closegradphoto.jpg';
 import { AboutContainer, AboutTextContainer, AboutImageContainer } from "../styles/About.style";
+import { ProjectSectionContainer, Cards } from "../styles/ProjectCard.style";
+import FullCardList from "./FullCardList";
+import { ContactSectionContainer } from "../styles/Contact.style";
 import { Divider } from "../styles/MobileFullPage.style";
+import Contact from "./Contact";
 
 class MobileFullPage extends React.Component {
     constructor(props) {
@@ -52,7 +56,7 @@ class MobileFullPage extends React.Component {
                             </h2>
                         </Divider>
                         <AboutContainer type="mobile">
-                            <AboutTextContainer type="mobile">
+                            <AboutTextContainer type="mobile" style={{textAlign: "center"}}>
                                 <p>
                                     Hi! My name is Chukwudi Ikem and I am a first generation Nigerian American with the hopes of learning more about
                                     the mystery that are computers. I have an interest in Web Development that started after my coding bootcamp
@@ -78,9 +82,29 @@ class MobileFullPage extends React.Component {
                             <h2>
                                 <span>02. </span>Projects
                             </h2>
-                        </Divider>                                                                    
+                        </Divider> 
+                        <ProjectSectionContainer type="mobile">
+                            <Cards type="mobile">
+                                <FullCardList type="mobile" />                                
+                            </Cards>
+                        </ProjectSectionContainer>
+                        {/* ------------------------------------------------------------------------------------------------------------- */}
+                        <Divider>
+                            <h2>
+                                <span>03. </span>Contact
+                            </h2>
+                        </Divider> 
+                        <ContactSectionContainer type="mobile">
+                            <h1 style={{ color: "aliceblue" }}>Connect.</h1>
+                            <p style={{ color: "#D3D3D3", textAlign: "center" }}>
+                                {`I am currently looking for new grad opportunities. I would prefer a job as a web developer considering it is my passion, but honestly, 
+                            code is code and I will not restrict myself to certain endeavors. Feel free to email me using the button below.`}
+                            </p>
+                            <Button onClick={() => window.location = 'mailto:chukwudimikem@gmail.com'} size="small">
+                                <span>Contact</span>
+                            </Button>
+                        </ContactSectionContainer>                                                                                   
                     </BodySectionContainer>
-                    
                 </BodyContainer>
                 <Footer type="mobile" />
             </Container>
