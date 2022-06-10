@@ -18,7 +18,7 @@ class NavBar extends React.Component {
     render() {
         const { type } = this.props;
         return (
-            <NavBarContainer>
+            <NavBarContainer type={type}>
                 <FullNavBar>
                     <ClickablePhotoOfMe>
                         <Link to="/">

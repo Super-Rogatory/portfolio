@@ -26,10 +26,10 @@ class SkillsPopup extends React.Component {
     }
     render() {
         const { isFinishedTyping } = this.state;
-        const { togglePopup } = this.props;
+        const { togglePopup, type } = this.props;
         return (
             <PopupContainer>
-                <PopupSectionContainer>
+                <PopupSectionContainer type={type}>
                     <PopupSectionNavBar>
                         <PopupLeftSide>
                             <img src={logo} alt="logo of website"></img>

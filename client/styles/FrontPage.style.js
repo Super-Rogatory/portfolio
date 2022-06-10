@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     font-weight: 900;
-    ${(props) => props.type !== 'mobile' ? `height: 100vh;` : `height: auto;`}
+    ${(props) => props.type !== 'mobile' ? `height: 100vh;` : `height: 3000px;`}
     ${(props) => props.type !== 'mobile' ? `width: 100vw;`: `min-width: 485px;`}
+
     background-color: rgba(41,45,62,255);
 `;
 
@@ -12,6 +13,11 @@ export const BodyContainer = styled.div`
     justify-content: center;
     width: 100%;
     ${(props) => props.type !== 'mobile' ? `height: 65vh;` : `min-height: 65vh;`}
+    ${(props) => props.type === 'mobile' && `
+        position: relative;
+        top: 20vh;
+    `}
+
 `
 export const BodySectionContainer = styled.section`
     display: flex;
@@ -19,6 +25,9 @@ export const BodySectionContainer = styled.section`
     ${(props) => props.type !== 'mobile' ? `width: 65%;` : `width: 85%;`}
     height: 100%;
     justify-content: flex-start;
+    /* ${(props) => props.type === 'mobile' && `
+        margin-top: 15vh;
+    `} */
     ${(props) => 
         props.type !== 'mobile' ? 
     `

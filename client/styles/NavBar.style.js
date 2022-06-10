@@ -1,10 +1,21 @@
 import styled from 'styled-components';
 
+export const NavBarContainer = styled.div`
+    width: 100%;
+    ${(props) => props.type === 'mobile' &&  `
+        position: fixed;
+        border-bottom: 1px solid #D3D3D3;
+        background-color: rgba(41,45,62,255);
+        z-index: 2;
+    `}    
+`;
+
 export const FullNavBar = styled.div`
     display: flex;
     color: #616b93;
     width: 95%;
     ${(props) => props.type !== 'mobile' ? `height: 15vh;` : `min-height: 80px;`}
+
     margin: auto;
     justify-content: space-between;
     align-items: center;
@@ -12,10 +23,6 @@ export const FullNavBar = styled.div`
         margin: 0px;
         padding: 10px 0px;
     }
-`;
-
-export const NavBarContainer = styled.div`
-    width: 100%;
 `;
 
 export const ClickablePhotoOfMe = styled.div`

@@ -16,7 +16,7 @@ export const PopupSectionContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: ${(props) => props.type !== 'mobile' ? 50 : 90}%;
     height: 50%;
     border-radius: 5px;
     background-color: rgb(41,45,62);

@@ -11,6 +11,7 @@ import MediaQuery from "react-responsive";
 import { connect } from "react-redux";
 import { togglePopup } from "../store/actions/actionCreators";
 import { Button } from "../styles/NavBar.style";
+import SkillsPopup from "./SkillsPopup";
 
 class MobileFullPage extends React.Component {
     constructor(props) {
@@ -23,8 +24,8 @@ class MobileFullPage extends React.Component {
             <Container type="mobile">
                 <GlobalStyles />
                 <NavBar type="mobile" />
-                {openPopup && <SkillsPopup />}
-                <BodyContainer>
+                {openPopup && <SkillsPopup type="mobile" />}
+                <BodyContainer type="mobile">
                     <BodySectionContainer type="mobile">
                         <MediaQuery minHeight={420}>
                             <h6>Hello there! My name is</h6>
@@ -47,8 +48,9 @@ class MobileFullPage extends React.Component {
                                 </Button>
                         </MediaQuery>                        
                     </BodySectionContainer>
+                    
                 </BodyContainer>
-                <Footer dim={openPopup} />
+
             </Container>
         );
     }
