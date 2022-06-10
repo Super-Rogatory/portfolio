@@ -4,11 +4,14 @@ export const FullNavBar = styled.div`
     display: flex;
     color: #616b93;
     width: 95%;
-    height: 15vh;
-    min-height: 60px;
+    ${(props) => props.type !== 'mobile' ? `height: 15vh;` : `min-height: 80px;`}
     margin: auto;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
+    @media only screen and (max-width: 768px) {
+        margin: 0px;
+        padding: 10px 0px;
+    }
 `;
 
 export const NavBarContainer = styled.div`
@@ -31,12 +34,17 @@ export const ClickablePhotoOfMe = styled.div`
     & img:hover {
         transform: scale(1.1);
     }
-    @media only screen and (max-height: 450px) {        
+    @media only screen and (max-width: 768px) {
+        & img {
+            filter: opacity(1) drop-shadow(0px 0px 3px #99a8e8) invert(67%) sepia(15%) saturate(3715%) hue-rotate(197deg) brightness(109%) contrast(82%);
+        }
+    }
+    @media only screen and (max-height: 550px) {        
         & img {
             width: 100%;
             height: 100%; 
-            min-width: 25px;
-            min-height: 25px;      
+            min-width: 50px;
+            min-height: 50px;      
         } 
     }
     @media only screen and (min-height: 1050px) {        

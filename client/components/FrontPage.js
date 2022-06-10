@@ -48,11 +48,11 @@ class FrontPage extends React.Component {
                                 from Fullstack Academy. I strive to learn and grow
                                 as a developer because programming is fun!
                             </p>
-                            <MediaQuery minHeight={560}>
-                                <Button size="long" onClick={() => togglePopup() }>
-                                    <span>Current Skills</span>
-                                </Button>
-                            </MediaQuery>
+                                <MediaQuery minHeight={560}>
+                                    <Button size="long" onClick={() => togglePopup() }>
+                                        <span>Current Skills</span>
+                                    </Button>
+                                </MediaQuery>
                         </BodySectionContainer>
                         <ImgContainer dim={openPopup}>
                             <img
