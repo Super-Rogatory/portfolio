@@ -19,8 +19,8 @@ class NavBar extends React.Component {
         const { type } = this.props;
         return (
             <NavBarContainer type={type}>
-                <FullNavBar>
-                    <ClickablePhotoOfMe>
+                <FullNavBar type={type}>
+                    <ClickablePhotoOfMe type={type}>
                         <Link to="/">
                             <img
                                 src={logo}
@@ -28,7 +28,7 @@ class NavBar extends React.Component {
                             />
                         </Link>
                     </ClickablePhotoOfMe>
-                    <ClickableMenu>
+                    <ClickableMenu type={type}>
                         {type === 'mobile' ? <MobileNavBarLinks/> : <NavBarLinks/> }
                     </ClickableMenu>
                 </FullNavBar>

@@ -34,7 +34,7 @@ class About extends React.Component {
                                     and an apology to my father. There will always be something intrinsically fascinating about typing onto a mechanical keyboard and text appearing on the screen.
                                 </p>
                                 <p>
-                                    Futhermore, learning Web Development from front to back end is very rewarding and I hope that I might continue to learn and improve on my skills.
+                                    Furthermore, learning Web Development from front to back end is very rewarding and I hope that I might continue to learn and improve on my skills.
                                 </p>
                                 <p>
                                     P.S. I have more personality than that serious picture conveys, check out my TikTok page to see my goofy side!

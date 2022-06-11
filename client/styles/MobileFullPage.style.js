@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const MobileNavBarContainer = styled.div`
+    width: auto;
     & img {
         width: 50px;
         height: 50px;
         filter: invert(67%) sepia(15%) saturate(3715%) hue-rotate(197deg)
-            brightness(109%) contrast(82%);
+            brightness(109%) contrast(82%);        
     }
 `;
 
