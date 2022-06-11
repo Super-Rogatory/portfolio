@@ -54,21 +54,25 @@ class FullCardList extends React.Component {
 
         return (
             <>
-                <img
-                    className="direction-arrow-left"
-                    src={nav_left_arrow}
-                    alt="a left arrow for navigation"
-                    onClick={() => this.localMoveTwo({ direction: 'back' })}
-                    type={type}
-                ></img>
+                {type !== 'mobile' &&
+                    <>
+                        <img
+                            className="direction-arrow-left"
+                            src={nav_left_arrow}
+                            alt="a left arrow for navigation"
+                            onClick={() => this.localMoveTwo({ direction: 'back' })}
+                            type={type}
+                        ></img>
 
-                <img
-                    className="direction-arrow-right"
-                    src={nav_right_arrow}
-                    alt="a right arrow for navigation"
-                    onClick={() => this.localMoveTwo({ direction: 'forward' })}
-                    type={type}
-                ></img>                
+                        <img
+                            className="direction-arrow-right"
+                            src={nav_right_arrow}
+                            alt="a right arrow for navigation"
+                            onClick={() => this.localMoveTwo({ direction: 'forward' })}
+                            type={type}
+                        ></img> 
+                    </>
+                }                  
                 {allCardDescriptions.map((card, index) => 
                     index === currentProjectNumber &&
                     <ProjectCard type={type || "standard_view"} key={index}>

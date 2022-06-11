@@ -4,12 +4,15 @@ export const ProjectSectionContainer = styled.section`
     display: flex;
     justify-content: center;
     width: 100%;
-    height: ${(props) => props.type !== 'mobile' ? '100%' : '400px'};
+    height: ${(props) => props.type !== 'mobile' ? '100%' : '525px'};
+    ${(props) => props.type === "mobile" && `
+        flex-direction: column;
+        margin-top: 150px;    
+    `}    
 `
 export const Cards = styled.section`
     display: inline-flex;
     width: 100%;
-    ${(props) => props.type === 'mobile' && 'max-width: 400px'};
     height: 100%;
     align-items: ${(props) => props.type !== 'mobile' ? 'center' : 'flex-start'};
     justify-content: ${(props) => props.type !== 'mobile' ? 'space-evenly' : 'center'};
@@ -17,8 +20,8 @@ export const Cards = styled.section`
         position: absolute;
         width: 32px;
         height: 32px;
-        top: ${(props) => props.type !== 'mobile' ? '50' : '75'}%;  
-        left: ${(props) => props.type !== 'mobile' ? '5' : '10'}%;  
+        top: ${(props) => props.type !== 'mobile' ? '50' : '390'}%;  
+        left: ${(props) => props.type !== 'mobile' ? '5' : '30'}%;  
         transform: translate(-50%, -50%);
         transition: 1s ease-in-out;
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 
@@ -28,8 +31,8 @@ export const Cards = styled.section`
         position: absolute;
         width: 32px;
         height: 32px;
-        top: ${(props) => props.type !== 'mobile' ? '50' : '75'}%;  
-        left: ${(props) => props.type !== 'mobile' ? '95' : '90'}%;  
+        top: ${(props) => props.type !== 'mobile' ? '50' : '390'}%;  
+        left: ${(props) => props.type !== 'mobile' ? '95' : '70'}%;  
         transform: translate(-50%, -50%);
         transition: 1s ease-in-out;
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 

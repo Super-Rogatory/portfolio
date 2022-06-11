@@ -29,6 +29,17 @@ export const ContactSectionContainer = styled.section`
         font-weight: 400;
         color: #D3D3D3;
     }
+    ${(props) => props.type === "mobile" && `
+        flex-direction: column;
+        margin-top: 150px;   
+        @media only screen and (max-width: 433px) {
+            & p {
+                width: 100%;
+                font-size: 12px;
+            }
+        }         
+    `}
+
     ${(props) => props.type !== "mobile" && `
         @media only screen and (max-width: 1381px) {
             & h1 {

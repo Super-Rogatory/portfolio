@@ -3,8 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
     font-weight: 900;
     ${(props) => props.type !== 'mobile' ? `height: 100vh;` : `height: auto;`}
-    ${(props) => props.type !== 'mobile' ? `width: 100vw;`: `min-width: 485px;`}
-    background-color: rgba(41,45,62,255);
+    width: 100vw;
+    background-color: rgba(41,45,62,1);
+`;
+
+export const MainSection = styled.div`
+    ${(props) => props.type === 'mobile' && `    
+        padding: 0 25px;
+    `}
 `;
 
 export const BodyContainer = styled.div`
@@ -13,22 +19,78 @@ export const BodyContainer = styled.div`
     width: 100%;
     ${(props) => props.type !== 'mobile' ? `height: 65vh;` : `min-height: 65vh;`}
     ${(props) => props.type === 'mobile' && `
+        display: flex;
+        flex-direction: column;
         position: relative;
         top: 20vh;
-    `}
+        justify-content: flex-start;
+        width: 100%;
+        overflow: hidden;
+        & h6 {
+            margin-top: 0px;
+            margin-bottom: 25px;
+            font-size: 16px;
+            font-size: .6rem;
+            font-weight: 400;
+            color: #99a8e8;
+        }
+        & h1 {    
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 50px;                   
+            font-weight: 800;
+            white-space: nowrap;
+        }
+        & h2 {    
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 34px;                   
+            font-weight: 800;
+            white-space: nowrap;
+        }        
+        & p {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            line-height: 1.2rem;
+            font-weight: 400;
+            color: #D3D3D3;
+        }
+
+        @media only screen and (max-width: 465px) {
+            & h6 {
+                font-size: 0.5rem;
+            }
+        
+            & p {
+                font-size: 0.5rem;
+            }
+        }
+                  
+        @media only screen and (max-width: 560px) {
+            & p {
+                font-size: 0.55rem;
+            }
+            & h1 {    
+                font-size: 34px;                   
+
+            }
+            & h2 {    
+                font-size: 20px;                   
+            }              
+        }       
+    `
+}
 
 `
 export const BodySectionContainer = styled.section`
     display: flex;
     flex-direction: column;
-    ${(props) => props.type !== 'mobile' ? `width: 65%;` : `width: 85%;`}
+    ${(props) => props.type !== 'mobile' ? `width: 65%;` : `width: 100%;`}
     height: 100%;
-    justify-content: flex-start;
-    /* ${(props) => props.type === 'mobile' && `
-        margin-top: 15vh;
-    `} */
+    justify-content: ${(props) => props.type !== 'mobile' ? `center;` : `flex-start;`}
     ${(props) => 
-        props.type !== 'mobile' ? 
+        props.type !== 'mobile' ?
     `
         & h6 {
             margin-top: 20px;
@@ -106,53 +168,13 @@ export const BodySectionContainer = styled.section`
         }
            
     `
-    : 
-    `   
-        min-width: 430px;
-        padding: 0px 20px;
-        justify-content: space-around;
-        overflow: hidden;
-        & h6 {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            font-size: .6rem;
-            font-weight: 400;
+    :
+    `
+        & span {
             color: #99a8e8;
         }
-        & h1 {    
-            margin-top: 0px;
-            margin-bottom: 10px;                   
-            font-weight: 800;
-            white-space: nowrap;
-        }
-        & p {
-            margin-top: 0px;
-            margin-bottom: 10px;
-            font-size: 0.6rem;
-            line-height: 0.8rem;
-            font-weight: 400;
-            color: #D3D3D3;
-        }
-
-        @media only screen and (max-width: 465px) {
-            & h6 {
-                font-size: 0.55rem;
-            }
-        
-            & p {
-                font-size: 0.5rem;
-            }
-        }
-        @media only screen and (min-height: 700px) {
-            justify-content: space-evenly;
-            & p, h1, h6 {
-                margin: 0px;
-                padding: 0px;
-            }
-        }        
-        
-`}
-
+    `
+}
 `
 
 export const ImgContainer = styled.div`
