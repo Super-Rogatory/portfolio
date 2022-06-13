@@ -5,7 +5,7 @@ export const FooterContainer = styled.footer`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 20vh;
+    height: 15vh;
     min-height: 50px;
     overflow: hidden; 
     ${(props) => props.type === 'mobile' && `

@@ -17,7 +17,7 @@ export const BodyContainer = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    ${(props) => props.type !== 'mobile' ? `height: 65vh;` : `min-height: 65vh;`}
+    ${(props) => props.type !== 'mobile' ? `height: 70vh;` : `min-height: 65vh;`}
     ${(props) => props.type === 'mobile' && `
         display: flex;
         flex-direction: column;
@@ -107,6 +107,7 @@ export const BodySectionContainer = styled.section`
         }
         & p {
             margin-top: 30px;
+            margin-bottom: 20px;            
             font-size: 0.6em;
             max-width: 500px;
             height: 100px;
@@ -138,7 +139,7 @@ export const BodySectionContainer = styled.section`
                 height: 95px;
             }      
         }
-        @media only screen and (min-width: 1176px) and (max-height: 650px) {
+        @media only screen and (min-width: 1176px) and (max-height: 700px) {
             & h6 {
                 margin-top: 15px;
                 margin-bottom: 0px;
@@ -161,6 +162,10 @@ export const BodySectionContainer = styled.section`
                 font-weight: 400;
                 color: #D3D3D3;
             }        
+        }
+
+        @media only screen and (max-width: 1060px) {
+            padding-left: 30px;
         }
 
         @media only screen and (max-height: 550px) {
@@ -198,7 +203,7 @@ export const ImgContainer = styled.div`
         }
     } 
 
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 975px) {
         & img {
             height: 60%;
         }

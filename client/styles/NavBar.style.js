@@ -127,6 +127,9 @@ export const Button = styled.button`
         transition: 0.5s;
     }
     & span {
+        font-family: 'consolas', sans-serif;
+        font-weight: 300;
+        letter-spacing: .5px;  
         z-index: 1;
     }
 `
