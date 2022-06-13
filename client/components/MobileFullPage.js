@@ -54,12 +54,12 @@ class MobileFullPage extends React.Component {
                         </BodySectionContainer>
                     </BodyContainer>
                     {/* ------------------------------------------------------------------------------------------------------------- */}
-                    <AboutContainer type="mobile">
-                        <Divider>
+                    <Divider dividerFor="about">
                             <h2>
                                 <span>01. </span>About Me
                             </h2>
-                        </Divider>                        
+                    </Divider>                     
+                    <AboutContainer type="mobile">            
                         <AboutTextContainer type="mobile" style={{textAlign: "center"}}>
                             <p>
                                 Hi! My name is Chukwudi Ikem and I am a <span>first generation Nigerian American</span> with the hopes of learning more about
@@ -82,24 +82,23 @@ class MobileFullPage extends React.Component {
                         </AboutImageContainer>
                     </AboutContainer> 
                     {/* ------------------------------------------------------------------------------------------------------------- */}
-                    <ProjectSectionContainer type="mobile">
-                        <Divider>
+                    <Divider>
                             <h2>
                                 <span>02. </span>Projects
                             </h2>
-                        </Divider>                         
+                    </Divider>                      
+                    <ProjectSectionContainer type="mobile">
                         <Cards type="mobile">
                             <FullCardList type="mobile" />                                
                         </Cards>
                     </ProjectSectionContainer>
                     {/* ------------------------------------------------------------------------------------------------------------- */}
-                    <ContactSectionContainer type="mobile">
-                        <Divider>
+                    <Divider>
                             <h2>
                                 <span>03. </span>Contact
                             </h2>
-                        </Divider>                         
-                        <h1 style={{ color: "aliceblue" }}>Connect.</h1>
+                        </Divider>   
+                    <ContactSectionContainer type="mobile">                        
                         <p style={{ color: "#D3D3D3", textAlign: "center" }}>
                             {`I am currently looking for new grad opportunities. I would prefer a job as a web developer considering it is my passion, but honestly, 
                         code is code and I will not restrict myself to certain endeavors. Feel free to email me using the button below.`}

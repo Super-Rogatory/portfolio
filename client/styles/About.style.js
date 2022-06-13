@@ -4,7 +4,6 @@ export const AboutContainer = styled.div`
     display: inline-flex;
     ${(props) => props.type === "mobile" && `
         flex-direction: column;
-        margin-top: 150px;    
     `}
     justify-content: center;
     align-items: center;

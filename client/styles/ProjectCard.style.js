@@ -7,7 +7,6 @@ export const ProjectSectionContainer = styled.section`
     height: ${(props) => props.type !== 'mobile' ? '100%' : '525px'};
     ${(props) => props.type === "mobile" && `
         flex-direction: column;
-        margin-top: 150px;    
     `}    
 `
 export const Cards = styled.section`
@@ -146,6 +145,7 @@ export const ProjectCardDescription = styled.div`
             @media only screen and (max-width: 388px) {
                 & span {   
                     font-size: 0.5rem;
+                    overflow: hidden;
                 }                
             }                
         `
@@ -188,7 +188,8 @@ export const ProjectCardTechnologiesList = styled.div`
         @media only screen and (max-width: 388px) {  
             & span {
                 padding: 0px 10px;
-                font-size: 0.5rem;                   
+                font-size: 0.5rem; 
+                overflow: hidden;                  
             }
         }
         `

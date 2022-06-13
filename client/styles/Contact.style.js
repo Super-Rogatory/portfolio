@@ -23,7 +23,7 @@ export const ContactSectionContainer = styled.section`
     & p {
         margin-top: 30px;
         font-size: 0.6em;
-        width: ${(props) => props.type !== 'mobile' ? 500 : 400}px;
+        width: ${(props) => props.type !== 'mobile' ? '500px' : '80%'};
         height: ${(props) => props.type !== 'mobile' ? 100 : 150}px;
         line-height: 0.8rem;
         font-weight: 400;
@@ -31,11 +31,11 @@ export const ContactSectionContainer = styled.section`
     }
     ${(props) => props.type === "mobile" && `
         flex-direction: column;
-        margin-top: 150px;   
         @media only screen and (max-width: 433px) {
             & p {
                 width: 100%;
-                font-size: 12px;
+                font-size: 14px;
+                overflow: hidden;
             }
         }         
     `}
