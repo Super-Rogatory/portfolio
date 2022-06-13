@@ -58,6 +58,9 @@ export const PopupLeftSide = styled.div`
     align-items: center;
     width: auto;
     height: 100%;
+    @media only screen and (max-width: 385px) {
+        font-size: 12px;
+    }
 `;
 
 export const PopupRightSide = styled.div`
@@ -86,14 +89,19 @@ export const PopupSectionPrompt = styled.section`
         margin: 0px;
         padding: 0px;
     }
+    @media only screen and (max-width: 1013px) and (min-width: 801px) {
+        font-size: .6em;
+    }
 
     @media only screen and (max-width: 800px) {
         font-size: .5em;
     }
 
-    @media only screen and (max-width: 1013px) and (min-width: 801px) {
-        font-size: .6em;
-    }
+    @media only screen and (max-width: 385px) {
+        font-size: .45em;
+    }    
+
+
 `
 
 export const PopupSectionBody = styled.section`
@@ -108,17 +116,24 @@ export const PopupSectionBody = styled.section`
         display: block;
     }
 
+    @media only screen and (max-width: 1013px) and (min-width: 801px) {
+        & > span {
+            font-size: 0.8em;
+        }
+    }
+
     @media only screen and (max-width: 800px) {
         & > span {
             font-size: 0.7em;
         }
     }
 
-    @media only screen and (max-width: 1013px) and (min-width: 801px) {
+    @media only screen and (max-width: 385px) {
         & > span {
-            font-size: 0.8em;
+            font-size: 0.6em;
         }
-    }
+    }    
+
 `
 
 export const PopupSectionGrid = styled.section`

@@ -30,7 +30,6 @@ export const BodyContainer = styled.div`
             margin-top: 0px;
             margin-bottom: 25px;
             font-size: 16px;
-            font-size: .6rem;
             font-weight: 400;
             color: #99a8e8;
         }
@@ -59,7 +58,7 @@ export const BodyContainer = styled.div`
 
         @media only screen and (max-width: 465px) {
             & h6 {
-                font-size: 0.5rem;
+                font-size: 14px;
             }
         
             & p {

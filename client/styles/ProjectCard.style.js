@@ -55,15 +55,13 @@ export const ProjectCard = styled.div`
     box-shadow: 0px 0px 15px black;
     color: aliceblue;
     font-weight: 400;
-    ${(props) => props.type === "standard_view" && 
-        `
+    ${(props) => props.type === "standard_view" && `
         @media only screen and (max-width: 1500px) {
             width: 505px;
         }
         `
     }
     height: ${(props) => props.type !== 'mobile' && `
-
         @media only screen and (max-height: 530px) {
             height: 50%;
         }     
@@ -131,7 +129,8 @@ export const ProjectCardDescription = styled.div`
         font-size: 0.55rem;
         width: calc(100% - 20px);  
     }
-    ${props => props.type !== 'mobile' && 
+
+    ${props => props.type !== 'mobile' ? 
         `    
             @media only screen and (max-height: 530px) {
                 overflow: hidden;
@@ -141,6 +140,14 @@ export const ProjectCardDescription = styled.div`
             @media only screen and (max-height: 750px) and (min-height: 530px) {
                 height: 20%;
             }
+        `
+        : 
+        `
+            @media only screen and (max-width: 388px) {
+                & span {   
+                    font-size: 0.5rem;
+                }                
+            }                
         `
     }
 `
@@ -158,7 +165,7 @@ export const ProjectCardTechnologiesList = styled.div`
     color: #D3D3D3;
     text-align: center;
 
-    ${props => props.type !== 'mobile' && 
+    ${props => props.type !== 'mobile' ? 
         `    
         @media only screen and (max-width: 1500px) {
             font-size: 0.6rem;
@@ -167,6 +174,22 @@ export const ProjectCardTechnologiesList = styled.div`
             overflow: hidden;
             height: 50%; 
             font-size: 0.8rem;
+        }
+        `
+        :
+        `
+        @media only screen and (max-width: 479px) and (min-width: 388px) {  
+            & span {
+                padding: 0px 10px;
+                font-size: 0.65rem;                   
+            }
+        }          
+        
+        @media only screen and (max-width: 388px) {  
+            & span {
+                padding: 0px 10px;
+                font-size: 0.5rem;                   
+            }
         }
         `
     }    
