@@ -14,8 +14,8 @@ export const MainSection = styled.div`
     `}
     ${(props) => props.status === "dim" && `
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8)
-            brightness(65%)
-            blur(6px);
+            brightness(35%)
+            blur(10px);
         transition: 0.25s ease-in-out;
         pointer-events: none; 
     `}

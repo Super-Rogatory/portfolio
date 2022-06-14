@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import NavBarLinks from "./NavBarLinks";
 import MobileNavBarLinks from "./MobileNavBarLinks";
 import { HashLink } from "react-router-hash-link";
+import { connect } from "react-redux";
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -27,12 +28,13 @@ class NavBar extends React.Component {
 
     handleScroll() {
         const { prevScrollPosition } = this.state;
+        const { openSideBar } = this.props;
         const currentScrollPositon = window.scrollY;
         if (prevScrollPosition > currentScrollPositon || currentScrollPositon < 10) {
             this.setState({ isVisible: true });
         }
         
-        if (prevScrollPosition < currentScrollPositon) {
+        if (prevScrollPosition < currentScrollPositon && !openSideBar) {
             this.setState({ isVisible: false });
         }
 
@@ -44,12 +46,12 @@ class NavBar extends React.Component {
     }
 
     render() {
-        const { type } = this.props;
+        const { type, openSideBar } = this.props;
         const { isVisible } = this.state;
         return (
             <NavBarContainer type={type} style={{ top: isVisible ? 0 : -100}}>
                 <FullNavBar type={type}>
-                    <ClickablePhotoOfMe type={type}>
+                    <ClickablePhotoOfMe isSideBarOpen={openSideBar} type={type}>
                         {(type === 'mobile') ? 
                         <HashLink smooth to="/#home">
                             <img
@@ -79,4 +81,11 @@ class NavBar extends React.Component {
     }
 }
 
-export default NavBar;
+const mapStateToProps = (state) => {
+    return {
+        openSideBar: state.openNavSideBar,
+    };
+};
+
+export default connect(mapStateToProps, null)(NavBar);
+

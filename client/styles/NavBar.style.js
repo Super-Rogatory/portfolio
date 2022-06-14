@@ -33,6 +33,7 @@ export const ClickablePhotoOfMe = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    ${(props) => props.isSideBarOpen && 'pointer-events: none;'}
     ${(props) => props.type !== 'mobile' ? 
         `        
             & img {

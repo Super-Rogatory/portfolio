@@ -2,20 +2,38 @@ import styled from "styled-components";
 
 export const MobileNavBarContainer = styled.div`
     width: auto;
-    & img {
-        width: 50px;
-        height: 50px;
-        filter: invert(67%) sepia(15%) saturate(3715%) hue-rotate(197deg)
-            brightness(109%) contrast(82%);        
-    }
+    
 `;
 
 export const MobileNavBarBodyContainer = styled.nav`
-
+    position: fixed;
+    top: 100px;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: 2s;
 `;
 
 export const MobileNavBarImageContainer = styled.div`
-    & img {
+    & > img {
+        ${(props) => props.imgType === 'exit' ? 
+        `       
+            width: 28px;
+            height: 28px;
+            margin-right: 10px;
+            z-index: 3;
+            transition: 0.25s;
+        `   
+        : 
+        `
+            width: 50px;
+            height: 50px;
+            transition: 0.25s;
+        `
+        }
+        filter: invert(67%) sepia(15%) saturate(3715%) hue-rotate(197deg)
+            brightness(109%) contrast(82%);  
+
         cursor: pointer;
     }
 `;
