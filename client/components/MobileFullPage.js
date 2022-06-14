@@ -56,7 +56,7 @@ class MobileFullPage extends React.Component {
                     {/* ------------------------------------------------------------------------------------------------------------- */}
                     <Divider dividerFor="about">
                             <h2>
-                                <span>01. </span>About Me
+                                <span style={{ margin: '0px 5px'}}>01.</span><span style={{margin: '0px 5px 0px 0px', color: 'aliceblue'}}>About Me</span>
                             </h2>
                     </Divider>                     
                     <AboutContainer type="mobile">            
@@ -84,7 +84,7 @@ class MobileFullPage extends React.Component {
                     {/* ------------------------------------------------------------------------------------------------------------- */}
                     <Divider>
                             <h2>
-                                <span>02. </span>Projects
+                                <span style={{ margin: '0px 5px'}}>02.</span><span style={{margin: '0px 5px 0px 0px', color: 'aliceblue'}}>Projects</span>
                             </h2>
                     </Divider>                      
                     <ProjectSectionContainer type="mobile">
@@ -95,7 +95,7 @@ class MobileFullPage extends React.Component {
                     {/* ------------------------------------------------------------------------------------------------------------- */}
                     <Divider>
                             <h2>
-                                <span>03. </span>Contact
+                                <span style={{ margin: '0px 5px'}}>03.</span><span style={{margin: '0px 5px 0px 0px', color: 'aliceblue'}}>Contact</span>
                             </h2>
                         </Divider>   
                     <ContactSectionContainer type="mobile">                        

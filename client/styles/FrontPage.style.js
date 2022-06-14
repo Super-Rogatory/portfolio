@@ -3,11 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
     font-weight: 900;
     ${(props) => props.type !== 'mobile' ? `height: 100vh;` : `height: auto;`}
-    width: 100vw;
+    width: 100%;
     background-color: rgba(41,45,62,1);
+    
 `;
 
 export const MainSection = styled.div`
+    max-width: 100%;
     ${(props) => props.type === 'mobile' && `    
         padding: 0 25px;
     `}
