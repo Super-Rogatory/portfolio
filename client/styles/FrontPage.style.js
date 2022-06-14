@@ -19,7 +19,7 @@ export const BodyContainer = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    ${(props) => props.type !== 'mobile' ? `height: 70vh;` : `min-height: 65vh;`}
+    ${(props) => props.type !== 'mobile' ? `height: 70vh;` : `height: auto;`}
     ${(props) => props.type === 'mobile' && `
         display: flex;
         flex-direction: column;

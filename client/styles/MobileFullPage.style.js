@@ -11,7 +11,7 @@ export const MobileNavBarContainer = styled.div`
 `;
 
 export const Divider = styled.div`
-    ${(props) => props.dividerFor === 'about' ? `margin-top: calc(150px + 20vh);` : `margin-top: 150px;`}
+    ${(props) => props.dividerFor === 'about' ? `margin-top: calc(60px + 20vh);` : `margin-top: 60px;`}
     & h2 {
         display: flex;
         align-items: center;

@@ -49,7 +49,7 @@ export const ProjectCard = styled.div`
     flex-direction: column;
     width: ${(props) => props.type !== 'mobile' ? '600px' : '88% '};
     height: 100%;
-    max-height: 500px;
+    max-height: 470px;
     border-radius: 5px;
     box-shadow: 0px 0px 15px black;
     color: aliceblue;

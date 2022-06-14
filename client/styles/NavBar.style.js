@@ -6,7 +6,6 @@ export const NavBarContainer = styled.div`
     width: 100%;
     ${(props) => props.type === 'mobile' &&  `
         position: fixed;
-        top: 0;
         height: 100px;
         background-color: rgba(41,45,62,255);
         z-index: 2;
