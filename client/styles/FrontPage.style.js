@@ -5,13 +5,19 @@ export const Container = styled.div`
     ${(props) => props.type !== 'mobile' ? `height: 100vh;` : `height: auto;`}
     width: 100%;
     background-color: rgba(41,45,62,1);
-    
 `;
 
 export const MainSection = styled.div`
     max-width: 100%;
     ${(props) => props.type === 'mobile' && `    
         padding: 0 25px;
+    `}
+    ${(props) => props.status === "dim" && `
+        filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8)
+            brightness(65%)
+            blur(6px);
+        transition: 0.25s ease-in-out;
+        pointer-events: none; 
     `}
 `;
 

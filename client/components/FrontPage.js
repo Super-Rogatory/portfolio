@@ -76,8 +76,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-      // dispatching plain actions
-        togglePopup: () => dispatch(togglePopup(true)),
+        togglePopup: () => dispatch(togglePopup(true))
     }
 }
 

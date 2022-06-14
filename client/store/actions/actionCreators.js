@@ -1,4 +1,4 @@
-import { TOGGLE_POPUP, PREV_PAGE, NEXT_PAGE } from "./actionTypes";
+import { TOGGLE_POPUP, PREV_PAGE, NEXT_PAGE, TOGGLE_MOBILE_NAV_POPUP } from "./actionTypes";
 
 export const togglePopup = (status) => {
     return {
@@ -18,5 +18,12 @@ export const rewindPage = (direction) => {
     return {
         type: PREV_PAGE,
         status: direction
+    }
+}
+
+export const toggleMobileNavPopup = (status) => {
+    return {
+        type: TOGGLE_MOBILE_NAV_POPUP,
+        status
     }
 }

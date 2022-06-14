@@ -13,7 +13,7 @@ class Footer extends React.Component {
         const { type, dim } = this.props;
         return (
             <FooterContainer type={type}>
-                <FooterSectionContainer dim={dim}>
+                <FooterSectionContainer type={type} dim={dim}>
                     <a href="https://github.com/Super-Rogatory" target="_blank">
                         <img src={github} alt="github icon" />
                     </a>

@@ -9,14 +9,23 @@ export const FooterContainer = styled.footer`
     min-height: 50px;
     overflow: hidden; 
     ${(props) => props.type === 'mobile' && `
-        margin-top: 20vh;
+        margin-top: 60px;
     `}      
 `;
 
 export const FooterSectionContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
-    width: 50%;
+    ${(props) => props.type !== 'mobile' ? `
+        justify-content: space-evenly;
+        width: 50%;    
+    `
+    :
+    `
+        justify-content: space-around;
+        width: 80%;         
+    `
+    }
+
 
     & a {
         margin: 0px;

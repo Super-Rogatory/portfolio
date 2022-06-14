@@ -10,6 +10,15 @@ export const MobileNavBarContainer = styled.div`
     }
 `;
 
+export const MobileNavBarBodyContainer = styled.nav`
+
+`;
+
+export const MobileNavBarImageContainer = styled.div`
+    & img {
+        cursor: pointer;
+    }
+`;
 export const Divider = styled.div`
     ${(props) => props.dividerFor === 'about' ? `margin-top: calc(60px + 20vh);` : `margin-top: 60px;`}
     & h2 {

@@ -1,9 +1,10 @@
 import { combineReducers } from "redux";
-import { nextTwoProjectsStatus, toggleStatus } from "./effects";
+import { nextTwoProjectsStatus, toggleNavigationSideBar, toggleStatus } from "./effects";
 
 const rootReducer = combineReducers({
     openPopup: toggleStatus,
-    showNextTwoProjects: nextTwoProjectsStatus
+    showNextTwoProjects: nextTwoProjectsStatus,
+    openNavSideBar: toggleNavigationSideBar
 });
 
 export default rootReducer;

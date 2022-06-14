@@ -9,6 +9,7 @@ import logo from "../icons/logo(2).png";
 import { Link } from "react-router-dom";
 import NavBarLinks from "./NavBarLinks";
 import MobileNavBarLinks from "./MobileNavBarLinks";
+import { HashLink } from "react-router-hash-link";
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -49,12 +50,21 @@ class NavBar extends React.Component {
             <NavBarContainer type={type} style={{ top: isVisible ? 0 : -100}}>
                 <FullNavBar type={type}>
                     <ClickablePhotoOfMe type={type}>
+                        {(type === 'mobile') ? 
+                        <HashLink smooth to="/#home">
+                            <img
+                                src={logo}
+                                alt="a drawn image of me, image from: Sam Galang."
+                            />
+                        </HashLink>
+                        :
                         <Link to="/">
                             <img
                                 src={logo}
                                 alt="a drawn image of me, image from: Sam Galang."
                             />
                         </Link>
+                        }
                     </ClickablePhotoOfMe>
                     <ClickableMenu type={type}>
                         {type === "mobile" ? (
