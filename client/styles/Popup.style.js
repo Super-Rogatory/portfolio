@@ -4,7 +4,7 @@ export const PopupContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(41,45,62,0.9);
+    ${(props) => props.type !== 'mobile' && `background-color: rgba(41,45,62,0.9)`};
     width: 100%;
     height: 100%;
     position: absolute;
