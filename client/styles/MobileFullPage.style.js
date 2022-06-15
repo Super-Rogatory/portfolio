@@ -2,16 +2,46 @@ import styled from "styled-components";
 
 export const MobileNavBarContainer = styled.div`
     width: auto;
-    
 `;
 
 export const MobileNavBarBodyContainer = styled.nav`
     position: fixed;
     top: 100px;
-    right: 0;
+    bottom: 0px;
+    right: 0px;
     height: 100vh;
     width: 100vw;
-    transition: 2s;
+
+    & div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%; 
+    }
+    & ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 70%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    & a {
+        text-decoration: none;
+        color: rgba(41,45,62,255);
+    }    
+
+    & li {
+        margin: 20px 0px;  
+        width: 300px;
+        text-align: center; 
+        
+    }
+    & a > span {
+        text-shadow: .5px .5px 6px #99a8e8; 
+    }
+
 `;
 
 export const MobileNavBarImageContainer = styled.div`

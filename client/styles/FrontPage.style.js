@@ -9,14 +9,14 @@ export const Container = styled.div`
 
 export const MainSection = styled.div`
     max-width: 100%;
+    transition: 0.45s ease-in-out;        
     ${(props) => props.type === 'mobile' && `    
         padding: 0 25px;
     `}
     ${(props) => props.status === "dim" && `
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8)
-            brightness(35%)
-            blur(10px);
-        transition: 0.25s ease-in-out;
+            brightness(60%)
+            blur(30px);
         pointer-events: none; 
     `}
 `;

@@ -39,28 +39,43 @@ class MobileNavBarLinks extends React.Component {
                     </MobileNavBarImageContainer>
                     {openSideBar &&
                     <MobileNavBarBodyContainer>
-                        <ul>
-                            <HashLink smooth to="/#home" onClick={() => toggleSideBar(openSideBar)}>
-                                <li><span>Home</span></li>
-                            </HashLink>                            
-                            <HashLink smooth to="/#about" onClick={() => toggleSideBar(openSideBar)}>
-                                <li><span>About</span></li>
-                            </HashLink>
-                            <HashLink smooth to="/#projects" onClick={() => toggleSideBar(openSideBar)}>
-                                <li><span>Projects</span></li>
-                            </HashLink>
-                            <HashLink smooth to="/#contact" onClick={() => toggleSideBar(openSideBar)}>
-                                <li><span>Contact</span></li>
-                            </HashLink>
-
-                            <Link to="/resume.pdf" target="_blank">
+                        <div>
+                            <ul>
                                 <li>
-                                    <Button size="small">
-                                        <span>Resume</span>
-                                    </Button>
+                                    <HashLink smooth to="/#home" onClick={() => toggleSideBar(openSideBar)}>
+                                        <span>Home</span>                                
+                                    </HashLink>
+                                </li>                            
+                                <li> 
+                                    <HashLink smooth to="/#about" onClick={() => toggleSideBar(openSideBar)}>
+                                        <span>About</span>
+                                    </HashLink>
                                 </li>
-                            </Link>
-                        </ul> 
+                                <li>
+                                    <HashLink smooth to="/#projects" onClick={() => toggleSideBar(openSideBar)}>
+                                        <span>Project</span>
+                                    </HashLink>
+                                </li>
+                                <li>
+                                    <HashLink smooth to="/#contact" onClick={() => toggleSideBar(openSideBar)}>
+                                        <span>Contact</span>
+                                    </HashLink>
+                                </li>
+                                <li>
+                                    <HashLink smooth to="/#socials" onClick={() => toggleSideBar(openSideBar)}>
+                                        <span>Social</span>
+                                    </HashLink>
+                                </li>
+                                <Link to="/resume.pdf" target="_blank">
+                                    <li>
+                                        <Button size="small">
+                                            <span>Resume</span>
+                                        </Button>
+                                    </li>
+                                </Link>
+                            </ul>                             
+                        </div>
+
                     </MobileNavBarBodyContainer>
                 }
             </MobileNavBarContainer>
