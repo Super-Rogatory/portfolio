@@ -10,5 +10,6 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0px;
         padding: 0px;
         font-family: 'consolas', sans-serif;
+        background-color: rgba(41,45,62,1);
     }
 `;
