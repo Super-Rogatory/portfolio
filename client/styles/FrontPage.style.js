@@ -96,8 +96,11 @@ export const BodySectionContainer = styled.section`
     ${(props) => props.type !== 'mobile' ? `width: 65%;` : `width: 100%;`}
     height: 100%;
     justify-content: ${(props) => props.type !== 'mobile' ? `center;` : `flex-start;`}
+    & span {
+        color: #99a8e8;
+    }    
     ${(props) => 
-        props.type !== 'mobile' ?
+        props.type !== 'mobile' &&
     `
         & h6 {
             margin-top: 20px;
@@ -179,12 +182,6 @@ export const BodySectionContainer = styled.section`
             overflow: hidden;
         }
            
-    `
-    :
-    `
-        & span {
-            color: #99a8e8;
-        }
     `
 }
 `

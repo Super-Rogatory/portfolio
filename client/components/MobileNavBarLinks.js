@@ -53,7 +53,7 @@ class MobileNavBarLinks extends React.Component {
                                 </li>
                                 <li>
                                     <HashLink smooth to="/#projects" onClick={() => toggleSideBar(openSideBar)}>
-                                        <span>Project</span>
+                                        <span>Projects</span>
                                     </HashLink>
                                 </li>
                                 <li>

@@ -42,9 +42,9 @@ class FrontPage extends React.Component {
                                 I am a new grad software engineer.
                             </h1>
                             <p>
-                                I graduated cum laude honors with a B.S. in Computer
+                                I graduated <span>cum laude honors</span> with a B.S. in Computer
                                 Science and a minor in Mathematics. I also graduated
-                                from a software engineering bootcamp back in 2021
+                                from a <span>software engineering bootcamp</span> back in 2021
                                 from Fullstack Academy. I strive to learn and grow
                                 as a developer because programming is fun!
                             </p>

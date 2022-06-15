@@ -29,7 +29,8 @@ export const MobileNavBarBodyContainer = styled.nav`
     }
     & a {
         text-decoration: none;
-        color: rgba(41,45,62,255);
+        color: aliceblue;
+        font-weight: 400;
     }    
 
     & li {
@@ -39,7 +40,7 @@ export const MobileNavBarBodyContainer = styled.nav`
         
     }
     & a > span {
-        text-shadow: .5px .5px 6px #99a8e8; 
+        text-shadow: 0px 0px 10px #99a8e8; 
     }
 
 `;

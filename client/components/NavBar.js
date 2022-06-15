@@ -31,7 +31,7 @@ class NavBar extends React.Component {
         const { openSideBar } = this.props;
         const currentScrollPositon = window.scrollY;
         if (prevScrollPosition > currentScrollPositon) {
-            if(Math.abs(prevScrollPosition - currentScrollPositon) > 5 || currentScrollPositon < 10) {
+            if(Math.abs(prevScrollPosition - currentScrollPositon) > 5 || currentScrollPositon < 40) {
                 this.setState({ isVisible: true });
             }
         }

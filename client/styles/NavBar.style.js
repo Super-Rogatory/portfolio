@@ -33,6 +33,9 @@ export const ClickablePhotoOfMe = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    & img {
+        filter: opacity(1) drop-shadow(0px 0px 3px #99a8e8) invert(67%) sepia(15%) saturate(3715%) hue-rotate(197deg) brightness(109%) contrast(82%);
+    }
     ${(props) => props.isSideBarOpen && 'pointer-events: none;'}
     ${(props) => props.type !== 'mobile' ? 
         `        
@@ -40,7 +43,6 @@ export const ClickablePhotoOfMe = styled.div`
                 width: 55px;
                 height: 55px;
                 max-height: 10vh;
-                filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8); 
             } 
         `
         :
@@ -56,11 +58,6 @@ export const ClickablePhotoOfMe = styled.div`
         transform: scale(1.1);
     }
 
-    @media only screen and (max-width: 768px) {
-        & img {
-            filter: opacity(1) drop-shadow(0px 0px 3px #99a8e8) invert(67%) sepia(15%) saturate(3715%) hue-rotate(197deg) brightness(109%) contrast(82%);
-        }
-    }
     ${(props) => props.type !== 'mobile' &&
     `            
         @media only screen and (max-height: 550px) {        

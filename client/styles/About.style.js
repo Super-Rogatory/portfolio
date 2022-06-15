@@ -30,6 +30,10 @@ export const AboutTextContainer = styled.section`
         text-overflow: ellipsis;
         word-wrap: break-word;
     }
+    
+    & p span {
+        color: #99a8e8;       
+    }  
 
     ${(props) => props.type !== 'mobile' ? 
 `        @media only screen and (max-width: 1325px) and (max-height: 600px) {
@@ -64,11 +68,7 @@ export const AboutTextContainer = styled.section`
         }
     `
         :
-    `
-        & p span {
-            color: #99a8e8;       
-        }   
-
+    ` 
         @media only screen and (max-width: 665px)  {
             & p {
                 font-size: 15px;
