@@ -6,6 +6,7 @@ import {
     ProjectCardDescription,
     ProjectCardTechnologiesList,
     SpecialButton,
+    ProjectMobileArrows
 } from "../styles/ProjectCard.style";
 import MediaQuery from 'react-responsive';
 import github from "../icons/github.png";
@@ -119,9 +120,27 @@ class FullCardList extends React.Component {
                         <ProjectCardTechnologiesList type={type || "standard_view"}>
                             <span>{card.techStack}</span>
                         </ProjectCardTechnologiesList>
-                </ProjectCard>
-                                    
+                </ProjectCard>                                    
                 )}
+                {type === 'mobile' &&
+                    <ProjectMobileArrows>                        
+                        <img
+                            className="direction-arrow-left"
+                            src={nav_left_arrow}
+                            alt="a left arrow for navigation"
+                            onClick={() => this.localMoveTwo({ direction: 'back' })}
+                            type={type}
+                        ></img>
+
+                        <img
+                            className="direction-arrow-right"
+                            src={nav_right_arrow}
+                            alt="a right arrow for navigation"
+                            onClick={() => this.localMoveTwo({ direction: 'forward' })}
+                            type={type}
+                        ></img> 
+                    </ProjectMobileArrows>
+                }                  
             </>                
                       
         );

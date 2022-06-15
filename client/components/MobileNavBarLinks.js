@@ -75,7 +75,6 @@ class MobileNavBarLinks extends React.Component {
                                 </Link>
                             </ul>                             
                         </div>
-
                     </MobileNavBarBodyContainer>
                 }
             </MobileNavBarContainer>

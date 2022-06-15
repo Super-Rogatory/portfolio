@@ -11,7 +11,7 @@ export const MobileNavBarBodyContainer = styled.nav`
     right: 0px;
     height: 100vh;
     width: 100vw;
-
+    background-color: rgba(41,45,62,1);
     & div {
         display: flex;
         justify-content: center;

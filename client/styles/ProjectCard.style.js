@@ -10,12 +10,13 @@ export const ProjectSectionContainer = styled.section`
     `}    
 `
 export const Cards = styled.section`
-    display: inline-flex;
+    display: ${(props) => props.type !== 'mobile' ? 'inline-flex' : 'flex'};
+    flex-direction: ${(props) => props.type !== 'mobile' ? 'row' : 'column'};
     width: 100%;
     height: 100%;
-    align-items: ${(props) => props.type !== 'mobile' ? 'center' : 'flex-start'};
-    justify-content: ${(props) => props.type !== 'mobile' ? 'space-evenly' : 'center'};
-    & img.direction-arrow-left {
+    align-items: ${(props) => props.type !== 'mobile' ? 'center' : 'center'};
+    justify-content: ${(props) => props.type !== 'mobile' ? 'space-evenly' : 'flex-start'};
+    & > img.direction-arrow-left {
         position: absolute;
         width: 32px;
         height: 32px;
@@ -26,7 +27,7 @@ export const Cards = styled.section`
         filter: opacity(1) drop-shadow(0px 0px 1px #99a8e8); 
         cursor: pointer;
     }
-    & img.direction-arrow-right  {
+    & > img.direction-arrow-right  {
         position: absolute;
         width: 32px;
         height: 32px;
@@ -47,7 +48,7 @@ export const Cards = styled.section`
 export const ProjectCard = styled.div`
     display: flex;
     flex-direction: column;
-    width: ${(props) => props.type !== 'mobile' ? '600px' : '88% '};
+    width: ${(props) => props.type !== 'mobile' ? '600px' : '88%'};
     height: 100%;
     max-height: 470px;
     border-radius: 5px;
@@ -223,5 +224,25 @@ export const SpecialButton = styled.label`
     & img:hover {
         filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8);
         transition: 0.3s;
+    }    
+`
+
+export const ProjectMobileArrows = styled.div`
+    display: flex;
+    justify-content: space-evenly;    
+    max-height: 50px;   
+    width: 100%;
+    margin: 20px 0;
+    & > img.direction-arrow-left {
+        width: 40px;
+        height: 40px;  
+        filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8); 
+        cursor: pointer;
+    }
+    & > img.direction-arrow-right  {
+        width: 40px;
+        height: 40px;  
+        filter: opacity(1) drop-shadow(0px 0px 2px #99a8e8); 
+        cursor: pointer;      
     }    
 `
