@@ -8,7 +8,7 @@ const cards = [
         src: dinoguys,
         alt: "picture of dino guys game",
         gitHubLink: "https://github.com/potatoes-team/dinoguys",
-        demoLink: "https://dinoguys.herokuapp.com",
+        demoLink: "https://dinoguys.org",
         title: "DinoGuys",
         description: `
         DinoGuys is a 2D platformer battle royale style game
@@ -20,7 +20,7 @@ const cards = [
         src: chatterly,
         alt: "picture of chatterly application",
         gitHubLink: "https://github.com/Super-Rogatory/chatterly",
-        demoLink: "https://wechatterly.herokuapp.com",
+        demoLink: "https://wechatterly.com",
         title: "WeChatterly",
         description: `
             WeChatterly is a web socket based chat application

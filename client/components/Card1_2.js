@@ -63,7 +63,7 @@ class Cards1_2 extends React.Component {
                                         <img src={github} alt="github icon" />
                                     </a>
                                     <a
-                                        href="https://dinoguys.herokuapp.com"
+                                        href="https://dinoguys.org"
                                         target="_blank"
                                     >
                                         <img
@@ -107,7 +107,7 @@ class Cards1_2 extends React.Component {
                                         <img src={github} alt="github icon" />
                                     </a>
                                     <a
-                                        href="https://wechatterly.herokuapp.com"
+                                        href="https://wechatterly.com"
                                         target="_blank"
                                     >
                                         <img
