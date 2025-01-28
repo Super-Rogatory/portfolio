@@ -119,11 +119,12 @@ export const BodySectionContainer = styled.section`
             margin-top: 30px;
             margin-bottom: 20px;            
             font-size: 0.6em;
-            max-width: 500px;
-            height: 100px;
+            max-width: 650px;
+            height: 135px;
             line-height: 0.8rem;
             font-weight: 400;
             color: #D3D3D3;
+            overflow: hidden;
         }
         
         @media only screen and (max-width: 1381px) {
@@ -146,7 +147,7 @@ export const BodySectionContainer = styled.section`
             & p {
                 font-size: 0.6em;
                 width: 100%;
-                height: 95px;
+                height: 135px;
             }      
         }
         @media only screen and (min-width: 1176px) and (max-height: 700px) {
@@ -167,7 +168,7 @@ export const BodySectionContainer = styled.section`
                 margin-top: 30px;
                 font-size: 0.6em;
                 width: 80%;
-                height: 100px;
+                height: 160px;
                 line-height: 0.8rem;
                 font-weight: 400;
                 color: #D3D3D3;
@@ -175,9 +176,15 @@ export const BodySectionContainer = styled.section`
         }
 
         @media only screen and (max-width: 1060px) {
-            padding-left: 30px;
+            padding-left: 30px; 
         }
 
+        @media only screen and (max-width: 870px) {
+            & p {
+                height: 160px;
+            }  
+        }
+            
         @media only screen and (max-height: 550px) {
             overflow: hidden;
         }
@@ -200,18 +207,12 @@ export const ImgContainer = styled.div`
         height: 450px; 
     }
 
-    @media only screen and (max-width: 1020px)   {
+    @media only screen and (max-width: 1000px)   {
         & img {
-            width: 100%;
-            height: 75%;
+            width: 237px;
+            height: 338px;
         }
-    } 
-
-    @media only screen and (max-width: 975px) {
-        & img {
-            height: 60%;
-        }
-    }    
+    }  
 
     @media only screen and (max-height: 570px) {
         & img {

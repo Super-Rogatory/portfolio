@@ -25,20 +25,17 @@ class About extends React.Component {
                         <MediaQuery minHeight={401}>
                             <AboutTextContainer>
                                 <p>
-                                    Hi! My name is Chukwudi Ikem and I am a <span>first generation Nigerian American</span> with the hopes of learning more about
-                                    the mystery that are computers. I have an <span>interest in Web Development</span> that started after my coding bootcamp
-                                    at FullStack Academy in 2021.
+                                    Hi! My name is Chukwudi Ikem, and I am a <span>first-generation Nigerian American</span> passionate about exploring the fascinating world of computers. My <span>interest in Web Development</span> began at Fullstack Academy in 2021, where I learned full-stack development.
                                 </p>
                                 <p>
-                                    Since I was a young boy, I've always had an affinity towards technology. <span>Some of the best memories I have ended with a broken computer </span>
-                                    and an apology to my father. There will always be something intrinsically fascinating about typing onto a mechanical keyboard and text appearing on the screen.
+                                    Since childhood, I’ve been captivated by technology. <span>Some of my fondest memories involve tinkering with computers</span>, often breaking them and apologizing to my dad. The ability to bring ideas to life through code continues to inspire me.
                                 </p>
                                 <p>
-                                    Furthermore, learning Web Development from front to back end is very rewarding and I hope that I might continue to learn and improve on my skills.
+                                    After earning my B.S. in Computer Science from California State University, Fullerton, with <span>cum laude honors</span>, I pursued a Master’s in Computer Science at USC. This journey shaped my skills in <span>full-stack development, machine learning, and optimization</span>.
                                 </p>
                                 <p>
-                                    P.S. I have more personality than that serious picture conveys, <span>check out my TikTok page to see my goofy side!</span>
-                                </p>                               
+                                    Professionally, I’ve worked on impactful projects, including developing a PyTorch dataset testing kit at IBM and creating web apps, microservices, and games. Programming is my creative outlet, and I’m always eager to learn more. <span>Check out my YouTube page</span> to see my personality beyond the code!
+                                </p>
                             </AboutTextContainer>
                         </MediaQuery>
                         <AboutImageContainer>

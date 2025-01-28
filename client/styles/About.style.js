@@ -9,6 +9,14 @@ export const AboutContainer = styled.div`
     align-items: center;
     width: ${(props) => props.type !== "mobile" ? 70: 100}%;
     height: 100%;
+    ${(props) => props.type !== 'mobile' && `
+        @media only screen and (max-width: 1725px) {
+           width: 80%;
+        }
+        @media only screen and (max-width: 950px) {
+            width: 90%;     
+        }
+    `}
 `
 
 export const AboutTextContainer = styled.section`
@@ -87,30 +95,55 @@ export const AboutImageContainer = styled.section`
     height: 100%;
 
     & img {
-            width: 280px;
-            height: 400px; 
+            width: 380px;
+            height: 500px; 
             object-fit: cover;
             border-radius: 5px;
             border: 2px solid aliceblue;
             box-shadow: 0px 0px 10px aliceblue;
     }
-    @media only screen and (max-height: 400px) {
+    @media only screen and (max-height: 999px) {
+        & img {
+            width: 280px;
+            height: 400px;
+        }   
+    }   
+    @media only screen and (max-height: 700px) {
+        & img {
+            width: 240px;
+            height: 360px;
+        }   
+    }
+    @media only screen and (max-height: 500px) {
         & img {
             width: 200px;
             height: 200px;
         }   
     } 
+    @media only screen and (max-width: 2300px) {
+        & img {
+            width: 340px;
+            height: 460px;
+        }   
+    }
+        
+    ${(props) => props.type !== 'mobile' && `
+        @media only screen and (max-width: 2000px) {
+            justify-content: flex-end;
+        } 
+    `}
 
-    @media only screen and (max-height: 630px) {
+    @media only screen and (max-width: 1350px) {
         & img {
-            width: 80%;
-            height: 80%;
-        }   
-    }  
-    @media only screen and (max-width: 1100px) {
+            width: 280px;
+            height: 400px;
+        }    
+    }
+    @media only screen and (max-width: 950px) {
         & img {
-            width: 80%;
-            height: 80%;
-        }   
-    }        
+            width: 230px;
+            height: 400px;
+        }       
+    }
+       
 `
