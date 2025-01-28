@@ -98,8 +98,7 @@ class MobileFullPage extends React.Component {
                         </Divider>   
                     <ContactSectionContainer id="contact" type="mobile">                        
                         <p style={{ color: "#D3D3D3", textAlign: "center" }}>
-                            {`I am currently looking for new grad opportunities. I would prefer a job as a web developer considering it is my passion, but honestly, 
-                        code is code and I will not restrict myself to certain endeavors. Feel free to email me using the button below.`}
+                            {`I am actively seeking new graduate opportunities. While I am particularly interested in roles as a front-end or back-end engineer, I am open to exploring a diverse array of opportunities. Please feel free to reach out via email using the button below.`}
                         </p>
                         <Button onClick={() => window.location = 'mailto:chukwudimikem@gmail.com'} size="small">
                             <span>Contact</span>
