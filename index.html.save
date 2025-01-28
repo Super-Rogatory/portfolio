@@ -1,0 +1,31 @@
+<!--
+    Reference Sites
+https://www.mandyharriswilliams.com/
+http://www.becomher.com/
+https://www.youtube.com/watch?v=IMlhJQwhrxI
+
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chukwudi Ikem</title>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <header> <!-- flex the header as a container for list items. width is 100%. set by the body -->
+            <!-- have not populated yet. -->
+            <div class="title-container">
+                <span class="portfolio-title">New Portfolio link below -> AWS | React | Nginx | Webpack | ...and more!</span>
+            </div>
+            <!-- populated the flex container with two nested flex containers. -->
+            <div class="menu-picture-wrapper-container">
+                <nav class="vertical-menu">
+                    <a href="https://www.chukwudiikem.com" target="_blank" class="active">Link</a> 
+                </nav>
+            </div>
+        </header>
+    </body>
+</html>

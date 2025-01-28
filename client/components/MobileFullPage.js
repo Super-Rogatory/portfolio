@@ -35,7 +35,7 @@ class MobileFullPage extends React.Component {
                     <BodyContainer id="intro" type="mobile">
                         <BodySectionContainer type="mobile">
                             <h6>Hello there! My name is</h6>
-                            <h1 style={{ color: "aliceblue",  }}>Chukwudi Makuo Ikem.</h1>
+                            <h1 style={{ color: "aliceblue",  }}>Chukwudi Ikem.</h1>
                             <h2 style={{ color: "#D3D3D3" }}>
                                 New grad software engineer.
                             </h2>
@@ -72,7 +72,7 @@ class MobileFullPage extends React.Component {
                                 Furthermore, learning Web Development from front to back end is very rewarding and I hope that I might continue to learn and improve on my skills.
                             </p>
                             <p>
-                                P.S. I have more personality than that serious picture conveys, <span>check out my TikTok page to see my goofy side!</span>
+                                P.S. I have more personality than that serious picture conveys, <span>check out my YouTube page to see my goofy side!</span>
                             </p>                             
                         </AboutTextContainer>
                         <AboutImageContainer type="mobile">
